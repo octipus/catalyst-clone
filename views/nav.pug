@@ -1,0 +1,38 @@
+extends layout
+
+block nav
+  header.header
+    a.header__title(href='/')
+      img(src='../media/CAT-NEW-BRANDING-WHITE.png' alt='Catalyst Logo' width='150px') 
+    .burger
+      .burger__patty
+      .burger__patty
+      .burger__patty
+    nav.menu
+      .menu__brand
+        #circle
+          svg(viewbox='0 0 300 300')
+            defs
+              path#circlePath(d='M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 ')
+            circle(cx='150' cy='100' r='75' fill='none')
+            g
+              use(xlink:href='#circlePath' fill='none')
+              text(fill='#01E2CE')
+                textpath(xlink:href='#circlePath') #YOURBRANDLAUNCHPAD#YOURBRANDLAUNCHPAD CATALYST&nbsp 
+        .social
+          a(href="https://www.instagram.com/justcatalyst/" target="_blank")
+            i.fa.fa-instagram.fa-1x.icon-3d
+          i.fa.fa-linkedin.fa-1x.icon-3d
+      ul.menu__list
+        li.menu__item
+          a.menu__link(href='/') HOME
+        li.menu__item
+          a.menu__link(href='/about') WHAT WE DO
+        li.menu__item
+          a.menu__link(href='/projects') PROJECTS
+        li.menu__item
+          a.menu__link(href='/contact') CONTACT
+  block index
+  block about
+  block contact
+  block projects

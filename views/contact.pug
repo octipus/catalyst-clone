@@ -1,0 +1,37 @@
+extends nav
+
+block contact
+  .main
+    .bio
+      a(href='/')
+        img(src='../media/logo.png' alt='Catalyst Logo' class="profile-img")
+      p Get in touch with us. Contact us for your projects
+      a(href='#' class="bio-link") Twitter
+        i(class="fa fa-twitter")
+      a(href='#' class="bio-link") Facebook
+        i(class="fa fa-facebook")
+      a(href='#' class="bio-link") Instagram
+        i(class="fa fa-instagram")
+    .contact 
+      form#form
+        //- legend(class="header") Get in touch
+        fieldset
+          input(type="text" placeholder="Your name..." id="name-input")
+          label(for="name-input" class="fa fa-user" aria-hidden="true")
+        fieldset
+          input(type="text" placeholder="Your email..." id="email-input")
+          label(for="email-input" class="fa fa-envelope" aria-hidden="true")
+        fieldset
+          input(type="text" placeholder="Your social media..." id="social-input")
+          label(for="social-input" class="fa fa-instagram" aria-hidden="true")
+        fieldset
+          textarea(type="text" placeholder="Your Message..." id="message-input")
+          label(for="message-input" class="fa fa-comment" aria-hidden="true")
+        fieldset
+          a.fill-button#btn-submit
+            span.fill-button-hover
+              span.fill-button-text Submit
+		
+        
+  link(rel='stylesheet' type='text/css' href='../css/contact.css')
+        

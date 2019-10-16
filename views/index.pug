@@ -1,0 +1,31 @@
+extends nav
+
+block index
+  main.home.cd-main.2d.cursor
+    .glitch
+      canvas#sphere(width='1000px' height='1000px')
+      .glitch__img
+      .glitch__img
+      .glitch__img
+      .glitch__img
+      .glitch__img
+    h2.content__title
+      | WELCOME TO 
+      span CATALYST
+    .desc-content
+      p.content__text
+        | The Catalyst for Celebrities and Influencers to launch their own products and brands.
+        br
+        br
+        | We pride ourselves on our sought-after product offering. From sustainable cut & sew apparel to trend-inducing accessories; we build brands that resonate with global consumers.
+      a.fill-button
+        span.fill-button-hover
+          span.fill-button-text Projects
+      a(href="/contact").fill-button
+        span.fill-button-hover
+          span.fill-button-text Work with us 
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js')
+  link(rel='stylesheet' type='text/css' href='css/homeStyles.css')
+  script(src='js/orb.js')
+  script(src='js/glitch.js')
+  
