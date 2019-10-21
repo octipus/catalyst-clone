@@ -195,6 +195,7 @@ margin: 16px 0;
   text-align:center;
   box-sizing:border-box;
   color:#c7c7c7;
+  background-color:transparent;
   text-decoration:none;
   cursor: pointer;
   font-family: Poppins, serif;
@@ -234,7 +235,6 @@ margin: 16px 0;
   position:relative;
   color:#c7c7c7;
   transition:color .35s;
-	top:2px;
 }
 .fill-button:hover .fill-button-text {
   color:#00E2CF;
