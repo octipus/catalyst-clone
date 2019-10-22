@@ -14,9 +14,9 @@ body {
 	--color-text: #424242;
 	--color-bg: #202020;
 	--color-link: #00E1CE;
-	--color-number: #fff;
-	--color-title: #00E1CE;
-	--color-caption: #fff;
+	--color-number: #00E1CE;
+	--color-title: #fff;
+	--color-caption: #00E1CE;
 	--color-content: #dadada;
 	--color-content-title: #00E1CE;
 	--color-content-meta: #fff;
@@ -77,8 +77,8 @@ main {
 }
 
 .content__item-header-title {
-	font-family: ivymode, sans-serif;
-	font-weight: 600;
+	font-family: Poppins, sans-serif;
+	font-weight: 900;
 	font-size: 3rem;
 	margin: 0;
 	color: var(--color-content-title);
@@ -102,7 +102,7 @@ main {
 	height: 100vh;
 	top: 0;
 	left: 0;
-	transform: rotate(-8deg);
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -137,8 +137,8 @@ main {
 }
 
 .grid--slideshow {
-	top: 17rem;
-	transform: rotate(-8deg);
+	top: 3rem !important;
+	transform: rotate(0deg);
 }
 
 .grid--titles {
@@ -173,9 +173,13 @@ main {
 .grid__item--title {
 	font-size: 13vw;
 	margin: 0;
-	font-family: ivymode, sans-serif;
-	font-weight: 600;
-	color: var(--color-title);
+	font-family: Poppins, sans-serif;
+	font-weight: 900;
+	-webkit-text-stroke: 1.5px var(--color-title);
+    text-stroke: 1.5px var(--color-title);
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+	color: transparent;
 }
 
 .grid__item--title span {
@@ -211,11 +215,7 @@ main {
 
 .number {
 	font-size: 2rem;
-	-webkit-text-stroke: 1.5px var(--color-number);
-    text-stroke: 1.5px var(--color-number);
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
-    color: transparent;
+    color: var(--color-number);
     line-height: 1;
     margin: 0 0 0.5rem 0;
     font-weight: 700;
@@ -249,6 +249,7 @@ main {
 
 .caption {
 	text-transform: uppercase;
+	font-style: italic;
 	letter-spacing: 0.1rem;
 	font-size: 0.75rem;
 	font-weight: 400;
