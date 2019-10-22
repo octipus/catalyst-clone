@@ -160,7 +160,7 @@ function canvasApp() {
 		cosAngle = Math.cos(turnAngle);
 
 		//background fill
-		context.fillStyle = "#202020";
+		context.fillStyle = "rgba(32, 32, 32)";
 		context.fillRect(0,0,displayWidth,displayHeight);
 
 		//update and draw particles

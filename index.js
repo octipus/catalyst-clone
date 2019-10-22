@@ -1,7 +1,10 @@
+require('dotenv').config();
 const path = require("path");
 const express = require("express");
 const nodeMailer = require("nodemailer");
 const bodyParser = require('body-parser');
+
+
 
 const app = express();
 const port = process.env.PORT || "8000";
@@ -35,8 +38,8 @@ app.post('/send-email', function (req, res) {
       secure: true,
       auth: {
           // should be replaced with real sender's account
-          user: '',
-          pass: ''
+          user: process.env.USER,
+          pass: process.env.KEY
       }
   });
 

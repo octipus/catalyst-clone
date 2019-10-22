@@ -64,6 +64,12 @@ margin: 16px 0;
 .main .bio .bio-link:hover {
   color: #00E1CE;
 }
+
+.bio p {
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-weight:600;
+}
 .main .contact {
   color: #00E1CE;
 }

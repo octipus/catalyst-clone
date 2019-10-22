@@ -1,7 +1,7 @@
 extends nav
 
 block index
-  main.home.cd-main.2d.cursor
+  main.home
     .glitch
       canvas#sphere(width='1000px' height='1000px')
       .glitch__img
@@ -18,7 +18,7 @@ block index
         br
         br
         | We pride ourselves on our sought-after product offering. From sustainable cut & sew apparel to trend-inducing accessories; we build brands that resonate with global consumers.
-      a.fill-button
+      a(href="/projects").fill-button
         span.fill-button-hover
           span.fill-button-text Projects
       a(href="/contact").fill-button
