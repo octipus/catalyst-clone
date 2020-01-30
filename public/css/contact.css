@@ -9,31 +9,32 @@ font-weight: 400;
 margin: 16px 0;
 }
 
-.main {
+.contact {
   display: flex;
   justify-content: space-around;
   align-items: baseline;
   height: 100vh;
   background: linear-gradient(120deg, #22202B 50%, #202020 50%);
 }
-.main .header,
-.main legend.header {
+.contact .header,
+.contact legend.header {
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 1.25rem;
   margin: 0.5em 0;
 }
-.main .bio,
-.main .contact {
+.contact .bio,
+.contact .contact-form {
   max-width: 100vw;
   margin-top: 20vh;
   margin-left: 25px;
+  z-index:999;
 }
-.main .bio .profile-img {
+.contact .bio .profile-img {
   max-width: 7em;
   border-radius: 50%;
 }
-.main .bio .bio-link {
+.contact .bio .bio-link {
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: calc(12px + 0.2vw);
@@ -47,10 +48,10 @@ margin: 16px 0;
   margin-bottom: 0.25em;
   transition: color 300ms ease-in-out;
 }
-.main .bio .bio-link i {
+.contact .bio .bio-link i {
   margin-left: 8px;
 }
-.main .bio .bio-link::after {
+.contact .bio .bio-link::after {
   display: block;
   content: "";
   height: 1px;
@@ -58,10 +59,10 @@ margin: 16px 0;
   background: #00E1CE;
   transition: width 300ms ease-in-out;
 }
-.main .bio .bio-link:hover::after {
+.contact .bio .bio-link:hover::after {
   width: 100%;
 }
-.main .bio .bio-link:hover {
+.contact .bio .bio-link:hover {
   color: #00E1CE;
 }
 
@@ -70,17 +71,17 @@ margin: 16px 0;
   letter-spacing: 8px;
   font-weight:600;
 }
-.main .contact {
+.contact .contact-form {
   color: #00E1CE;
 }
-.main .contact form fieldset {
+.contact .contact-form form fieldset {
   font-size: 1rem;
   position: relative;
   border: none;
   margin-bottom: 0.25em;
   padding: 0.25em 0;
 }
-.main .contact form fieldset label {
+.contact .contact-form form fieldset label {
   font-size: 0.875rem;
   display: block;
   position: absolute;
@@ -88,16 +89,16 @@ margin: 16px 0;
   top: 1em;
   color: #C7C7C7;
 }
-.main .contact form input,
-.main .contact form textarea {
+.contact .contact-form form input,
+.contact .contact-form form textarea {
   border: 0;
 }
-.main .contact form input:focus,
-.main .contact form textarea:focus {
+.contact .contact-form form input:focus,
+.contact .contact-form form textarea:focus {
   outline: none;
 }
-.main .contact form input,
-.main .contact form textarea {
+.contact .contact-form form input,
+.contact .contact-form form textarea {
   display: block;
   font-family: 'Poppins', monospace;
   letter-spacing: 3px;
@@ -110,8 +111,8 @@ margin: 16px 0;
   border-bottom: 1px solid #C7C7C7;
   transition: border 300ms ease-in-out;
 }
-.main .contact form input:focus,
-.main .contact form textarea:focus{
+.contact .contact-form form input:focus,
+.contact .contact-form form textarea:focus{
   border-bottom: 1px solid #00E1CE;
 }
 
@@ -120,15 +121,15 @@ margin: 16px 0;
   transition: border 300ms ease-in-out;
 }
 
-.main .contact form input::placeholder,
-.main .contact form textarea::placeholder,{
+.contact .contact-form form input::placeholder,
+.contact .contact-form form textarea::placeholder,{
     color: #35495e;
 }
-.main .contact textarea {
+.contact .contact-form textarea {
   resize: none;
 }
 
-.main {
+.contact {
   overflow: hidden;
   animation: Page 600ms ease-in-out forwards;
 }
@@ -137,8 +138,8 @@ margin: 16px 0;
   animation: Bio 600ms ease-in-out forwards;
 }
 
-.contact {
-  animation: Contact 600ms ease-in-out forwards;
+.contact-form {
+  animation: contact-form 600ms ease-in-out forwards;
 }
 
 @keyframes Page {
@@ -157,7 +158,7 @@ margin: 16px 0;
     transform: translateX(0);
   }
 }
-@keyframes Contact {
+@keyframes contact-form {
   0% {
     transform: translateX(50vw);
   }
@@ -179,7 +180,7 @@ margin: 16px 0;
 
 
 @media screen and (max-width: 980px) {
-  .main {
+  .contact {
     display:block !important;
     margin-right:25px;
     margin-top:0;

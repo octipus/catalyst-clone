@@ -134,14 +134,14 @@
 
 
 /* Grain Effect*/
-.img, .glitch {
+.home, .contact {
 	width: 100%;
 	overflow: hidden;
 	position: relative;
 	height: 100%;
 }
 
-.img:after, .glitch:after{
+.home:after, .contact:after{
   animation: grain 8s steps(10) infinite;
   background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/wild_oliva.png);
   content: "";
@@ -152,6 +152,7 @@
   top: -110%;
   width: 300%;
 }
+
 
 
 @keyframes grain {

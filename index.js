@@ -72,9 +72,6 @@ app.get("/about", (req, res) => {
 app.get("/contact", (req, res) => {
   res.render("contact", { title: "Contact" });
 });
-app.get("/projects", (req, res) => {
-  res.render("projects", { title: "Projects" });
-});
 
 
 

@@ -356,3 +356,7 @@ for (var i = 0; i < pulse.length; i++) {
     this.className += " active";
   });
 }
+
+
+$('.burger').click(function(){
+    $(".button-one").css("background-color", "yellow");

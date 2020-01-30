@@ -20,6 +20,7 @@
 	--blend-color-3: transparent;
 	--blend-color-4: transparent;
 	--blend-color-5: #af4949;
+	background-image: url(../media/logo-anim.svg);
 }
 
 .header__title {
@@ -34,11 +35,6 @@
 	animation-iteration-count: infinite;
 }
 
-#sphere {
-	width:100vh;
-	height: 100vh;
-
-}
 
 .content__title {
 	font-size: 9vw;
@@ -123,7 +119,6 @@
 	width: var(--glitch-width);
 	height: var(--glitch-height);
 	overflow: hidden;
-	background: url(../media/orb-03big-cut.png) no-repeat bottom right;
 	background-color: #202020;
 }
 
