@@ -20,7 +20,6 @@
 	--blend-color-3: transparent;
 	--blend-color-4: transparent;
 	--blend-color-5: #af4949;
-	background-image: url(../media/logo-anim.svg);
 }
 
 .header__title {
@@ -84,9 +83,6 @@
 		bottom:35vh;
 		-webkit-text-stroke-width: 1px;
 	}
-	/* #sphere {
-		display:none;
-	} */
 	.glitch {
 		opacity: 0.3;
 	}
@@ -111,7 +107,12 @@
 	}
 }
 
-/* Glitch styles */
+
+/*************************************************
+
+							Glitch Styles
+
+*************************************************/
 .glitch {
 	position: absolute;
 	top: 0;

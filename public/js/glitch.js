@@ -7,17 +7,24 @@
 }
 
 //Title animation on mousemove
-$(document).mousemove(function(event){
-   var xPos = (event.clientX/$(window).width())-0.5,
-       yPos = (event.clientY/$(window).height())-0.5,
-       box = $('.box'),
-       coord = $('.coordinates');
+$( document ).ready(function() {
 
-  TweenLite.to(box, 0.6, {
-    rotationY: 15 * xPos,
-    rotationX: 15 * yPos,
-    ease: Power1.easeOut,
-    transformPerspective: 900,
-    transformOrigin: 'center'
-  });
+			$(".box").mousemove(function(e) {
+					parallaxIt(e, ".one", 30);
+					parallaxIt(e, ".two", -50);
+					parallaxIt(e, ".three", 20);
+					parallaxIt(e, ".four", 50);
+			});
+
+			function parallaxIt(e, target, movement) {
+					var $this = $(".box");
+					var relX = e.pageX - $this.offset().left;
+					var relY = e.pageY - $this.offset().top;
+
+
+					TweenMax.to(target, 1, {
+							x: (relX - $this.width() / 2) / $this.width() * movement,
+							y: (relY - $this.height() / 2) / $this.height() * movement
+					});
+			}
 });

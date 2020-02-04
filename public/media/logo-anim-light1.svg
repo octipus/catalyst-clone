@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1197.92 794.17">
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="logo" data-name="Layer 1">
+      <path class="bottom-left inner" d="M.6 793.8l199.88-396.35h166.07L166.66 793.8H.6z"/>
+      <path class="bottom-left outer" d="M366 397.82L166.44 793.43H1.19l199.52-395.61H366m1.2-.74H200.26L0 794.17h166.89l200.26-397.09z"/>
+      <path class="top-left inner" d="M367.75 396.72L567.63.37H733.7L533.81 396.72H367.75z"/>
+      <path class="top-left outer" d="M733.1.74L533.59 396.35H368.34L567.86.74H733.1m1.19-.74H567.4L367.15 397.08H534L734.29 0z"/>
+      <path class="bottom-right inner" d="M464.22 793.8l199.89-396.35h166.07L630.29 793.8H464.22z"/>
+      <path class="bottom-right outer" d="M829.58 397.82L630.06 793.43H464.82l199.52-395.61h165.24m1.19-.74H663.88L463.63 794.17h166.89l200.25-397.09z"/>
+      <path class="top-right inner" d="M831.37 396.72L1031.26.37h166.07L997.44 396.72H831.37z"/>
+      <path class="top-right outer" d="M1196.73.74L997.21 396.35H832L1031.48.74h165.25m1.19-.74H1031L830.77 397.08h166.89L1197.92 0z"/>
+    </g>
+  </g>
+</svg>
