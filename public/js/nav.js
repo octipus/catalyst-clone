@@ -1,49 +1,3 @@
-/////////////////////   Dynamic Logo for each page   /////////////////////
-document.addEventListener('DOMContentLoaded', function(){
-  if (window.location.pathname == '/') {
-    window.onload=function(){
-     var elem = document.createElement("img");
-     elem.setAttribute("src", "../media/SVG/logo-general.svg");
-     elem.setAttribute("width", "250");
-     elem.setAttribute("alt", "Catalyst Logo");
-     document.getElementsByClassName("header__title")[0].appendChild(elem);
-     }
-   }else if (window.location.pathname == '/pod') {
-     window.onload=function(){
-      var elem = document.createElement("img");
-      elem.setAttribute("src", "../media/SVG/logo-pod.svg");
-      elem.setAttribute("width", "250");
-      elem.setAttribute("alt", "Catalyst Logo");
-      document.getElementsByClassName("header__title")[0].appendChild(elem);
-      }
-    }else if (window.location.pathname == '/manufacturing') {
-      window.onload=function(){
-       var elem = document.createElement("img");
-       elem.setAttribute("src", "../media/SVG/logo-manufacturing.svg");
-       elem.setAttribute("width", "250");
-       elem.setAttribute("alt", "Catalyst Logo");
-       document.getElementsByClassName("header__title")[0].appendChild(elem);
-       }
-     }
-     else if (window.location.pathname == '/cosmetics') {
-       window.onload=function(){
-        var elem = document.createElement("img");
-        elem.setAttribute("src", "../media/SVG/logo-cosmetics.svg");
-        elem.setAttribute("width", "250");
-        elem.setAttribute("alt", "Catalyst Logo");
-        document.getElementsByClassName("header__title")[0].appendChild(elem);
-        }
-      }
-      else if (window.location.pathname == '/fitness') {
-        window.onload=function(){
-         var elem = document.createElement("img");
-         elem.setAttribute("src", "../media/SVG/logo-fitness.svg");
-         elem.setAttribute("width", "250");
-         elem.setAttribute("alt", "Catalyst Logo");
-         document.getElementsByClassName("header__title")[0].appendChild(elem);
-         }
-       }
-  });
 
 /////////////////////   Navigation  /////////////////////
 document.addEventListener('DOMContentLoaded', function(){
@@ -123,11 +77,3 @@ document.addEventListener("DOMContentLoaded", function(e) {
 window.onbeforeunload = function() {
   document.body.classList.add('fade');
 };
-
-$(document).ready(function(){
-  $('.dropdown-submenu a.test').on("click", function(e){
-    $(this).next('ul').toggle();
-    e.stopPropagation();
-    e.preventDefault();
-  });
-});
