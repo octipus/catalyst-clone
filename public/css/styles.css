@@ -1,215 +1,65 @@
+/*************************************************
+
+							Global Variables
+
+*************************************************/
+:root {
+	--blue: #3B27BA;
+	--green: #13CA91;
+	--pink: #FF61BE;
+	--red: #ff0040;
+	--white: #fff;
+	--dark: #252528;
+
+	--bold: 900;
+	--regular: 400;
+	--font: nimbus-sans-extended, sans-serif;
+
+}
+
+* {
+  box-sizing: border-box;
+}
 
 /*************************************************
 
-							BUTTONS STYLE
+							General CSS
 
 *************************************************/
-.fill-button {
-	height:50px;
-	margin-top:40px;
-	margin-left:10px;
-  position: relative;
-  overflow:hidden;
-  display:inline-block;
-  width:48%;
-  border:1px solid #c7c7c7;
-	background-color:transparent;
-  text-align:center;
-  box-sizing:border-box;
-  color:#c7c7c7;
-  text-decoration:none;
-  cursor: pointer;
-  font-family: Poppins, serif;
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	font-size:1em;
-	font-weight: 300;
-}
-.fill-button > span {
-  display:block;
-	height:50px;
 
-}
-.fill-button > .fill-button-hover:after, .fill-button > .fill-button-hover:before {
-  position:absolute;
-  top:0;
-  opacity:0;
-  display:block;
-  content:"";
-  width:0;
-  height:50px;
-}
-.fill-button > .fill-button-hover:after {
-  background-color:#202020;
-  transform:skewX(45deg);
-  transform-origin:center center;
-  transition:all .35s, opacity .4s;
-  left:50%;
-}
-.fill-button .fill-button-hover:before {
-  background-color:#00E2CF;
-  transition:opacity 1s;
-}
-
-.fill-button .fill-button-text {
-  z-index:1;
-  position:relative;
-  color:#c7c7c7;
-  transition:color .35s;
-	top:10px;
-}
-.fill-button:hover .fill-button-text {
-  color:#00E2CF;
-}
-.fill-button .fill-button-hover:hover:after {
-  opacity:1;
-  left:2%;
-  width:95%;
-  transform:skewX(45deg);
-}
-.fill-button > .fill-button-hover:hover:before {
+body {
+	background: #202020;
+	color: var(--white);
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+  margin:0;
   opacity: 1;
-  left: 0;
-  width:100%;
+  transition: 1s opacity;
+}
+
+body.fade {
+    opacity: 0;
+    transition: 1s opacity;
 }
 
 
 
 /*************************************************
 
-							BLINKING CURSOR
-
-*************************************************/
-.blinking-cursor {
-	display:none;
-
-}
-
-.active span:not(:hover), .cursor-project  {
-	display:inline;
-	margin-left:-3px;
-  font-weight: 300;
-  color: #d3d9d9;
-  -webkit-animation: 1s blink step-end infinite;
-  -moz-animation: 1s blink step-end infinite;
-  -ms-animation: 1s blink step-end infinite;
-  -o-animation: 1s blink step-end infinite;
-  animation: 1s blink step-end infinite;
-}
-
-@keyframes "blink" {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: #d3d9d9;
-  }
-}
-
-@-moz-keyframes blink {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: #d3d9d9;
-  }
-}
-
-@-webkit-keyframes "blink" {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: #d3d9d9;
-  }
-}
-
-@-ms-keyframes "blink" {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: #d3d9d9;
-  }
-}
-
-@-o-keyframes "blink" {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: #d3d9d9;
-  }
-}
-
-
-
-/*************************************************
-
-							GRAIN EFFECT
-
-*************************************************/
-/* .home, .contact {
-	width: 100%;
-	overflow: hidden;
-	position: relative;
-	height: 100%;
-} */
-
-.home:after, .contact:after{
-  animation: grain 8s steps(10) infinite;
-  background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/wild_oliva.png);
-  content: "";
-  height: 300%;
-  left: -50%;
-  opacity: 0.4;
-  position: fixed;
-  top: -110%;
-  width: 300%;
-}
-
-
-
-@keyframes grain {
-  0%, 100% { transform:translate(0, 0) }
-  10% { transform:translate(-5%, -10%) }
-  20% { transform:translate(-15%, 5%) }
-  30% { transform:translate(7%, -25%) }
-  40% { transform:translate(-5%, 25%) }
-  50% { transform:translate(-15%, 10%) }
-  60% { transform:translate(15%, 0%) }
-  70% { transform:translate(0%, 15%) }
-  80% { transform:translate(3%, 35%) }
-  90% { transform:translate(-10%, 10%) }
-}
-
-
-
-/*************************************************
-
-							SVG Animation
+							SVG LOGO  Animation
 
 *************************************************/
 .logo-bg {
-	/* -webkit-mask: url(../media/logo-anim-light.svg) no-repeat;
-  mask: url(../media/logo-anim-light.svg) no-repeat;
-  -webkit-mask-size: fit;*/
-	width:100%;
+	margin-left:-10vw;
 	height: 100%;
 		z-index:999999999999999;
 }
 
-.inner {
-	fill:gray;
-}
 
 .outer {
-	fill:#none;
+	fill:#fff;
 }
-/*
-.bottom-left .outer:hover {
-	display:none;
-} */
+
 
 .top-left, .top-right {
 		  -webkit-animation: slide-in-tl 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) ;
@@ -278,5 +128,273 @@
 		-webkit-transform: translateY(0) translateX(0);
 				transform: translateY(0) translateX(0);
 		opacity: 1;
+	  }
+	}
+
+
+	/**
+	 * ----------------------------------------
+	 * Print on demand page
+	 * ----------------------------------------
+	 */
+
+	 .red {
+	 	fill:var(--red);
+	 	margin-left:25vw;
+	 }
+	 h2.red {
+	 	margin-top:0;
+	 	-webkit-text-stroke-color: var(--red);
+	 	margin-left:5vw;
+	 }
+	 .content_red {
+		 top:70vh !important;
+		 left:10vw !important;
+	 }
+
+	/**
+	 * ----------------------------------------
+	 * Manufacturing page
+	 * ----------------------------------------
+	 */
+
+	 .blue {
+	 	fill:var(--blue);
+		margin-left:30vw;
+	 }
+
+	 h2.blue {
+	 	margin-top:-20vw;
+	 	-webkit-text-stroke-color: var(--blue);
+	 	margin-left:-8vw;
+	 }
+	 .content_blue {
+		 top:60vh !important;
+		 left:10vw !important;
+	 }
+
+	/**
+		* ----------------------------------------
+	  * Cosmetics page
+	  * ----------------------------------------
+	  */
+
+		.pink {
+			fill:var(--pink);
+			margin-left:10vw;
+		}
+		h2.pink {
+ 	 	margin-top:-20vw;
+ 	 	-webkit-text-stroke-color: var(--pink);
+ 	 	margin-left:-8vw;
+ 	 }
+ 	 .content_pink {
+ 		 top:60vh !important;
+ 		 left:10vw !important;
+ 	 }
+
+	/**
+		* ----------------------------------------
+		* Fitness page
+		* ----------------------------------------
+		*/
+
+		.green {
+			fill:var(--green);
+			margin-left:-10vw;
+		}
+		h2.green {
+ 	 	margin-top:-20vw;
+ 	 	-webkit-text-stroke-color: var(--green);
+ 	 	left:7vw;
+ 	 }
+	 h2.green span {
+		 display:none;
+	 }
+ 	 .content_green {
+ 		 top:60vh !important;
+ 		 right: 10!important;
+ 	 }
+
+	/*************************************************
+
+								BUTTONS STYLE
+
+	*************************************************/
+	.fill-button {
+		height:50px;
+		margin-top:40px;
+		margin-left:10px;
+	  position: relative;
+	  overflow:hidden;
+	  display:inline-block;
+	  width:48%;
+	  border:1px solid var(--white);
+		background-color:transparent;
+	  text-align:center;
+	  box-sizing:border-box;
+	  color:var(--white);
+	  text-decoration:none;
+	  cursor: pointer;
+	  font-family: var(--font);
+		font-weight: var(--regular);
+		font-size:1em;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		z-index:999;
+	}
+	.fill-button > span {
+	  display:block;
+		height:50px;
+	}
+	.fill-button > .fill-button-hover:after, .fill-button > .fill-button-hover:before {
+	  position:absolute;
+	  top:0;
+	  opacity:0;
+	  display:block;
+	  content:"";
+	  width:0;
+	  height:50px;
+	}
+	.fill-button > .fill-button-hover:after {
+	  background-color:#292929;
+	  transform:skewX(45deg);
+	  transform-origin:center center;
+	  transition:all .35s, opacity .4s;
+	  left:50%;
+	}
+	.fill-button .fill-button-hover:before {
+	  background-color:var(--blue);
+	  transition:opacity 1s;
+	}
+
+	.fill-button .fill-button-text {
+	  z-index:1;
+	  position:relative;
+	  color:var(--white);
+	  transition:color .35s;
+		top:10px;
+	}
+	.fill-button:hover .fill-button-text {
+	  color:var(--white);
+	}
+	.fill-button .fill-button-hover:hover:after {
+	  opacity:1;
+	  left:2%;
+	  width:95%;
+	  transform:skewX(45deg);
+	}
+	.fill-button > .fill-button-hover:hover:before {
+	  opacity: 1;
+	  left: 0;
+	  width:100%;
+	}
+
+
+
+	/*************************************************
+
+								GRAIN EFFECT
+
+	*************************************************/
+	/* .home, .contact {
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+		height: 100%;
+	} */
+
+	.home:after, .contact:after{
+	  animation: grain 8s steps(10) infinite;
+	  background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/wild_oliva.png);
+	  content: "";
+	  height: 300%;
+	  left: -50%;
+	  opacity: 0.4;
+	  position: fixed;
+	  top: -110%;
+	  width: 300%;
+	}
+
+
+
+	@keyframes grain {
+	  0%, 100% { transform:translate(0, 0) }
+	  10% { transform:translate(-5%, -10%) }
+	  20% { transform:translate(-15%, 5%) }
+	  30% { transform:translate(7%, -25%) }
+	  40% { transform:translate(-5%, 25%) }
+	  50% { transform:translate(-15%, 10%) }
+	  60% { transform:translate(15%, 0%) }
+	  70% { transform:translate(0%, 15%) }
+	  80% { transform:translate(3%, 35%) }
+	  90% { transform:translate(-10%, 10%) }
+	}
+
+
+
+	/*************************************************
+
+								BLINKING CURSOR
+
+	*************************************************/
+	.blinking-cursor {
+		display:none;
+	}
+
+	.active span:not(:hover), .cursor-project  {
+		display:inline;
+		margin-left:-3px;
+	  font-weight: var(--regular);
+	  color: #d3d9d9;
+	  -webkit-animation: 1s blink step-end infinite;
+	  -moz-animation: 1s blink step-end infinite;
+	  -ms-animation: 1s blink step-end infinite;
+	  -o-animation: 1s blink step-end infinite;
+	  animation: 1s blink step-end infinite;
+	}
+
+	@keyframes "blink" {
+	  from, to {
+	    color: transparent;
+	  }
+	  50% {
+	    color: #d3d9d9;
+	  }
+	}
+
+	@-moz-keyframes blink {
+	  from, to {
+	    color: transparent;
+	  }
+	  50% {
+	    color: #d3d9d9;
+	  }
+	}
+
+	@-webkit-keyframes "blink" {
+	  from, to {
+	    color: transparent;
+	  }
+	  50% {
+	    color: #d3d9d9;
+	  }
+	}
+
+	@-ms-keyframes "blink" {
+	  from, to {
+	    color: transparent;
+	  }
+	  50% {
+	    color: #d3d9d9;
+	  }
+	}
+
+	@-o-keyframes "blink" {
+	  from, to {
+	    color: transparent;
+	  }
+	  50% {
+	    color: #d3d9d9;
 	  }
 	}

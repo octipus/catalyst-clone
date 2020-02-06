@@ -72,6 +72,18 @@ app.get("/about", (req, res) => {
 app.get("/contact", (req, res) => {
   res.render("contact", { title: "Contact" });
 });
+app.get("/pod", (req, res) => {
+  res.render("pod", { title: "Print on demand" });
+});
+app.get("/manufacturing", (req, res) => {
+  res.render("manufacturing", { title: "Manufacturing" });
+});
+app.get("/cosmetics", (req, res) => {
+  res.render("cosmetics", { title: "Cosmetics" });
+});
+app.get("/fitness", (req, res) => {
+  res.render("fitness", { title: "Fitness" });
+});
 
 
 

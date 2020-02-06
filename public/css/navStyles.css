@@ -1,28 +1,6 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  /* overflow:hidden; */
-  min-height: 100vh;
-  background: #202020;
-  font-family: 'Poppins', sans-serif;
-  color: white;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  margin:0;
-  opacity: 1;
-  transition: 1s opacity;
-}
-
-body.fade {
-    opacity: 0;
-    transition: 1s opacity;
-}
-
 .header {
   position: fixed;
-  z-index: 5;
+  z-index: 9999;
   width: 100%;
 }
 
@@ -84,6 +62,8 @@ body.fade {
   top: 0;
   width: 100%;
   visibility: hidden;
+  font-family: var(--font);
+  font-weight: var(--bold);
 }
 .menu--active {
   visibility: visible;
@@ -101,7 +81,7 @@ body.fade {
 .menu__list {
   margin: 0;
   padding: 0;
-  background-color: #202020;
+  background-color: var(--dark);
   list-style-type: none;
   transform: translate3d(0, -100%, 0);
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
@@ -111,7 +91,7 @@ body.fade {
 }
 .menu__brand {
 
-  background: #22202B;
+  background: var(--blue);
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
   transform: translate3d(0, 100%, 0);
 }
@@ -142,11 +122,11 @@ body.fade {
 .menu__link:before {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: 50%;
   left: 50%;
-  width: 10px;
-  height: 2px;
-  background: #01E2CE;
+  width: 0.1px;
+  height: 5px;
+  background: var(--blue);
   transform: translateX(-50%);
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -215,11 +195,6 @@ div.menu__brand--active {
   border-radius: 50%;
 }
 
-h1, h2, h3, p {
-  margin: 0;
-  font-weight: 400;
-}
-
 main {
   height: 100vh;
   display: flex;
@@ -227,11 +202,12 @@ main {
   justify-content: center;
   padding: 8vw;
 }
+
 main h1 > a {
-  color: white;
+  color: var(--red);
   text-decoration: none;
-  font-size: 48px;
-  font-weight: 300;
+  font-size: 32px;
+  font-weight: var(--normal);
 }
 
 .support {
@@ -286,8 +262,8 @@ main h1 > a {
 /*CIRCLE ROTATION */
 
 #circle text {
-  font-family: 'Poppins', serif;
-  font-size: 8px;
+  font-family: var(--font);
+  font-size: 16px;
   letter-spacing: 3px;
 }
 

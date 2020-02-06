@@ -31,8 +31,7 @@ margin: 16px 0;
   z-index:999;
 }
 .contact .bio .profile-img {
-  max-width: 7em;
-  border-radius: 50%;
+  max-width: 12em;
 }
 .contact .bio .bio-link {
   text-transform: uppercase;

@@ -3,7 +3,6 @@ extends layout
 block nav
   header.header
     a.header__title(href='/')
-      img(src='../media/CAT-NEW-BRANDING-WHITE.png' alt='Catalyst Logo' width='150px') 
     .burger
       .burger__patty
       .burger__patty
@@ -17,8 +16,8 @@ block nav
             circle(cx='150' cy='100' r='75' fill='none')
             g
               use(xlink:href='#circlePath' fill='none')
-              text(fill='#01E2CE')
-                textpath(xlink:href='#circlePath') #YOURBRANDLAUNCHPAD#YOURBRANDLAUNCHPAD CATALYST&nbsp 
+              text(fill='var(--dark)')
+                textpath(xlink:href='#circlePath') # YOUR  BRAND  REVOLUTION  CATALYST #
         .social
           a(href="https://www.instagram.com/justcatalyst/" target="_blank")
             i.fa.fa-instagram.fa-1x.icon-3d
@@ -27,10 +26,24 @@ block nav
         li.menu__item
           a.menu__link(href='/') HOME
         li.menu__item
-          a.menu__link(href='/about') WHAT WE DO
+          a.menu__link(href='#') WHAT WE DO
+          ul.submenu__list
+            li.submenu__item
+              a.submenu__link(href='/pod') PRINT ON DEMAND
+            li.submenu__item
+              a.submenu__link(href='/manufacturing') MANUFACTERED APPEAREL
+            li.submenu__item
+              a.submenu__link(href='/cosmetics') COSMETICS
+            li.submenu__item
+              a.submenu__link(href='/fitness') FITNESS
+        li.menu__item
+          a.menu__link(href='#') PROJECTS
         li.menu__item
           a.menu__link(href='/contact') CONTACT
   block index
+  block pod
+  block manufacturing
+  block cosmetics
+  block fitness
   block about
   block contact
-  block projects

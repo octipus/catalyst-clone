@@ -1,4 +1,4 @@
-//Glitch effect
+/////////////////////   Glitch Effect   /////////////////////
 {
 	imagesLoaded('.glitch__img', { background: true }, () => {
 		document.body.classList.remove('loading');
@@ -6,18 +6,20 @@
 	});
 }
 
-//Title animation on mousemove
-$( document ).ready(function() {
+/////////////////////   Title animation on mousemove   /////////////////////
 
-			$(".box").mousemove(function(e) {
-					parallaxIt(e, ".one", 30);
-					parallaxIt(e, ".two", -50);
-					parallaxIt(e, ".three", 20);
-					parallaxIt(e, ".four", 50);
+
+$( document ).ready(function() {
+	setTimeout(function() {
+			$(".home").mousemove(function(e) {
+					parallaxIt(e, ".one", -50);
+					parallaxIt(e, ".two", 30);
+					parallaxIt(e, ".three", 50);
+					parallaxIt(e, ".four", 20);
 			});
 
 			function parallaxIt(e, target, movement) {
-					var $this = $(".box");
+					var $this = $(".home");
 					var relX = e.pageX - $this.offset().left;
 					var relY = e.pageY - $this.offset().top;
 
@@ -27,4 +29,5 @@ $( document ).ready(function() {
 							y: (relY - $this.height() / 2) / $this.height() * movement
 					});
 			}
+    }, 1500);
 });

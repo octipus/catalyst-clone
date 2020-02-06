@@ -1,13 +1,8 @@
-.home {
-	--color-text: #fff;
-	--color-bg: #000;
-	--color-link: #f9d77e;
-	--color-link-hover: #fff;
-	--color-info: #efc453;
+:root {
 	--glitch-width: 100vw;
 	--glitch-height: 100vh;
 	--gap-horizontal: 10px;
-	--gap-vertical: 5px;
+	/* --gap-vertical: 5px; */
 	--time-anim: 4s;
 	--delay-anim: 2s;
 	--blend-mode-1: none;
@@ -22,9 +17,9 @@
 	--blend-color-5: #af4949;
 }
 
-.header__title {
+/* .header__title {
 	display:none;
-}
+} */
 
 .imgloaded .content__title,
 .imgloaded .content__text {
@@ -36,17 +31,18 @@
 
 
 .content__title {
-	font-size: 9vw;
+	font-size: 8vw;
 	margin: 35vh 0 0 0;
-	margin-left: -25vh;
+	margin-left: -20vh;
 	position: relative;
-	font-family: 'Poppins', sans-serif;
-	font-weight:600;
+	font-family: var(--font);
+	font-weight: var(--bold);
 	line-height:1;
 	color: transparent;
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-color: var(--white);
 	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.2);
+	z-index:999;
 }
 
 .content__title span {
@@ -58,16 +54,16 @@
 	top:14vh;
 	right:10vw;
 	max-width: 500px;
+	z-index:999;
 }
 
 .content__text {
-	font-family: 'Poppins', sans-serif;
-	font-weight: 300;
+	font-family: var(--font);
+	font-weight: var(--regular);
 	font-size: calc(12px + 0.2vw);
 	top: 4em;
 	right: 10vw;
 	text-align: right;
-	font-weight: 400;
 	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.25);
 }
 
@@ -82,9 +78,10 @@
 	.content__title {
 		bottom:35vh;
 		-webkit-text-stroke-width: 1px;
+		font-size:12vw;
 	}
 	.glitch {
-		opacity: 0.3;
+		opacity: 0.7;
 	}
 	.fill-button {
 		width:45% !important;
@@ -120,7 +117,7 @@
 	width: var(--glitch-width);
 	height: var(--glitch-height);
 	overflow: hidden;
-	background-color: #202020;
+
 }
 
 .glitch__img {
