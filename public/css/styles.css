@@ -304,7 +304,7 @@ body.fade {
 		height: 100%;
 	} */
 
-	.home:after, .contact:after{
+	.home:after, .contact:after, .services:after{
 	  animation: grain 8s steps(10) infinite;
 	  background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/wild_oliva.png);
 	  content: "";
