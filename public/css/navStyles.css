@@ -89,6 +89,43 @@
 .menu__list--active {
   transform: translate3d(0, 0, 0);
 }
+
+/******************* SUBMENU *******************/
+
+.submenu__list {
+  text-align:center;
+  list-style: none;
+  font-size: 2vh;
+}
+
+.submenu__link {
+  text-decoration:none;
+  color: transparent;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: white;
+  letter-spacing: 3px;
+  transition: 0.6s;
+}
+
+#pod:hover {
+  color: var(--red);
+  -webkit-text-stroke-color: transparent;
+}
+#manufactured:hover  {
+  color: var(--blue);
+  -webkit-text-stroke-color: transparent;
+}
+#cosmetics:hover  {
+  color: var(--pink);
+  -webkit-text-stroke-color: transparent;
+}
+#fitness:hover  {
+  color: var(--green);
+  -webkit-text-stroke-color: transparent;
+}
+
+
+
 .menu__brand {
 
   background: var(--blue);
@@ -119,6 +156,7 @@
   text-align:right;
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
+
 .menu__link:before {
   content: "";
   position: absolute;

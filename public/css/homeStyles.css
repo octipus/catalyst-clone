@@ -21,8 +21,7 @@
 	display:none;
 } */
 
-.imgloaded .content__title,
-.imgloaded .content__text {
+.imgloaded .content__title {
 	animation-name: glitch-anim-text;
 	animation-duration: var(--time-anim);
 	animation-timing-function: linear;

@@ -22,24 +22,24 @@ block nav
           a(href="https://www.instagram.com/justcatalyst/" target="_blank")
             i.fa.fa-instagram.fa-1x.icon-3d
           i.fa.fa-linkedin.fa-1x.icon-3d
-      ul.menu__list
+      ul#accordion.menu__list
         li.menu__item
-          a.menu__link(href='/') HOME
+          a.menu__link(href='#') HOME
         li.menu__item
-          a.menu__link(href='#') WHAT WE DO
+          a.menu__link#dropdown(href='#') WHAT WE DO
           ul.submenu__list
             li.submenu__item
-              a.submenu__link(href='/pod') PRINT ON DEMAND
+              a#pod.submenu__link(href='/pod') PRINT ON DEMAND
             li.submenu__item
-              a.submenu__link(href='/manufacturing') MANUFACTERED APPEAREL
+              a#manufactured.submenu__link(href='/manufacturing') MANUFACTERED APPEAREL
             li.submenu__item
-              a.submenu__link(href='/cosmetics') COSMETICS
+              a#cosmetics.submenu__link(href='/cosmetics') COSMETICS
             li.submenu__item
-              a.submenu__link(href='/fitness') FITNESS
+              a#fitness.submenu__link(href='/fitness') FITNESS
         li.menu__item
           a.menu__link(href='#') PROJECTS
         li.menu__item
-          a.menu__link(href='/contact') CONTACT
+          a.menu__link(href='/#') CONTACT
   block index
   block pod
   block manufacturing

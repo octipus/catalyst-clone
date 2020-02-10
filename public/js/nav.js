@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function(){
     var brand = document.querySelector('.menu__brand');
     var menuItems = document.querySelectorAll('.menu__item');
     var menuLinks = document.getElementsByClassName('menu__link');
+    var dropdown = document.getElementById('dropdown');
 
     var active = false;
 
@@ -95,8 +96,14 @@ document.addEventListener('DOMContentLoaded', function(){
       menuList.addEventListener('click', toggleMenu, false);
 
       for(let i = 0; i < menuLinks.length; i++) {
-        menuLinks[i].addEventListener("click", pageDelay)
+          menuLinks[i].addEventListener("click", pageDelay)
       }
+
+      dropdown.addEventListener("click", function(event){
+        console.log("test");
+        event.stopPropagation();
+      });
+
     };
 
 
@@ -115,6 +122,8 @@ document.addEventListener('DOMContentLoaded', function(){
 }());
 });
 
+
+
 /////////////////////   Fadein pageload   /////////////////////
 document.addEventListener("DOMContentLoaded", function(e) {
   document.body.classList.remove('fade');
@@ -123,11 +132,3 @@ document.addEventListener("DOMContentLoaded", function(e) {
 window.onbeforeunload = function() {
   document.body.classList.add('fade');
 };
-
-$(document).ready(function(){
-  $('.dropdown-submenu a.test').on("click", function(e){
-    $(this).next('ul').toggle();
-    e.stopPropagation();
-    e.preventDefault();
-  });
-});

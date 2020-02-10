@@ -7,8 +7,6 @@
 }
 
 /////////////////////   Title animation on mousemove   /////////////////////
-
-
 $( document ).ready(function() {
 	setTimeout(function() {
 			$(".home").mousemove(function(e) {
@@ -30,4 +28,16 @@ $( document ).ready(function() {
 					});
 			}
     }, 1500);
+});
+
+
+
+/////////////////////   Nav Submenu Accordion   /////////////////////
+
+$( document ).ready(function() {
+	$( function() {
+	    $( "#accordion" ).accordion({
+				collapsible: true
+			});
+	  } );
 });
