@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function(){
     var menuItems = document.querySelectorAll('.menu__item');
     var menuLinks = document.getElementsByClassName('menu__link');
     var dropdown = document.getElementById('dropdown');
+    var dropdownItems = document.querySelectorAll('.submenu__link');
 
     var active = false;
 
@@ -99,8 +100,11 @@ document.addEventListener('DOMContentLoaded', function(){
           menuLinks[i].addEventListener("click", pageDelay)
       }
 
-      dropdown.addEventListener("click", function(event){
-        console.log("test");
+      for(let i = 0; i < dropdownItems.length; i++) {
+          dropdownItems[i].addEventListener("click", pageDelay)
+      }
+
+      dropdown.addEventListener("click", function(event){ //dropdown menu onClick exception
         event.stopPropagation();
       });
 

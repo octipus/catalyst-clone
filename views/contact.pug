@@ -1,19 +1,27 @@
 extends nav
 
 block contact
-  main.contact
-    .bio
-      a(href='/')
-        img(src='../media/SVG/logo-general.svg' alt='Catalyst Logo' class="profile-img")
-      p Catalyst Global Ltd 
-      p Edinburgh House, 170 Kennington Lane
-      p SE11 5DP
-      a(href='mailto:hello@justcatalyst.com' class="bio-link") hello@justcatalyst.com
-      a(href='tel:+44-203-968-3965' class="bio-link") +44-203-968-3965
-      a(href='https://www.instagram.com/justcatalyst/' target="_blank" class="bio-link") Instagram
-        i(class="fa fa-instagram")
-      a(href='https://www.linkedin.com/company/c-atalyst/' target="_blank" class="bio-link") LinkedIn
-        i(class="fa fa-linkedin")
+  main.contact.home
+    .glitch 
+      svg.logo-bg.blank(xmlns='http://www.w3.org/2000/svg', viewbox='-50 0 1297.92 794.17')
+        g#logo-wrap(data-name='logo-wrap')
+          g#logo(data-name='logo')
+            path.bottom-left.inner.bottom.one(d='M.6 793.8l199.88-396.35h166.07L166.66 793.8H.6z')
+            path.bottom-left.outer.bottom(d='M366 397.82L166.44 793.43H1.19l199.52-395.61H366m1.2-.74H200.26L0 794.17h166.89l200.26-397.09z')
+            path.top-left.inner.top.two(d='M367.75 396.72L567.63.37H733.7L533.81 396.72H367.75z')
+            path.top-left.outer.top(d='M733.1.74L533.59 396.35H368.34L567.86.74H733.1m1.19-.74H567.4L367.15 397.08H534L734.29 0z')
+            path.bottom-right.inner.bottom.three(d='M464.22 793.8l199.89-396.35h166.07L630.29 793.8H464.22z')
+            path.bottom-right.outer.bottom(d='M829.58 397.82L630.06 793.43H464.82l199.52-395.61h165.24m1.19-.74H663.88L463.63 794.17h166.89l200.25-397.09z')
+            path.top-right.inner.top.four(d='M831.37 396.72L1031.26.37h166.07L997.44 396.72H831.37z')
+            path.top-right.outer.top(d='M1196.73.74L997.21 396.35H832L1031.48.74h165.25m1.19-.74H1031L830.77 397.08h166.89L1197.92 0z')
+      .glitch__img
+      .glitch__img
+      .glitch__img
+      .glitch__img
+      .glitch__img
+    h1.content__title.blank
+      | CONTACT
+      span 
     .contact-form 
       form#form(action='/send-email' method='post')
         fieldset
@@ -29,9 +37,17 @@ block contact
           textarea(type="text" placeholder="Your Message..." class="form-control" id="message" name="message")
           label(for="message" class="fa fa-comment" aria-hidden="true")
         fieldset
+          button(type='button') Print on Demand
+          button(type='button') Manufactured Appearel
+        fieldset
+          button(type='button') Cosmetics
+          button(type='button') Fitness
+        fieldset
           button.fill-button#submit(type="submit" name="submit")
             span.fill-button-hover
-              span.fill-button-text Submit	
-        
+              span.fill-button-text Submit	  
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js')
+  link(rel='stylesheet' type='text/css' href='css/homeStyles.css')  
   link(rel='stylesheet' type='text/css' href='../css/contact.css')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js')
         

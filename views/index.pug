@@ -1,7 +1,6 @@
 extends nav
 
 block index
-  -var general
   main.home
     .glitch 
       svg.logo-bg(xmlns='http://www.w3.org/2000/svg', viewbox='-50 0 1297.92 794.17')
@@ -20,7 +19,7 @@ block index
       .glitch__img
       .glitch__img
       .glitch__img
-    h2.content__title
+    h1.content__title
       | YOUR BRAND 
       span REVOLUTION
     .desc-content
@@ -37,7 +36,6 @@ block index
           span.fill-button-text Work with us 
   script(src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js')
   link(rel='stylesheet' type='text/css' href='css/homeStyles.css')
-  script(src='js/functions.js')
   script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js')
   
 

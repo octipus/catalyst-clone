@@ -2,7 +2,6 @@
 	--glitch-width: 100vw;
 	--glitch-height: 100vh;
 	--gap-horizontal: 10px;
-	/* --gap-vertical: 5px; */
 	--time-anim: 4s;
 	--delay-anim: 2s;
 	--blend-mode-1: none;
@@ -17,11 +16,7 @@
 	--blend-color-5: #af4949;
 }
 
-/* .header__title {
-	display:none;
-} */
-
-.imgloaded .content__title {
+.content__title {
 	animation-name: glitch-anim-text;
 	animation-duration: var(--time-anim);
 	animation-timing-function: linear;

@@ -28,7 +28,7 @@
 *************************************************/
 
 body {
-	background: #202020;
+	background: var(--dark);
 	color: var(--white);
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
@@ -142,7 +142,7 @@ body.fade {
 	 	fill:var(--red);
 	 	margin-left:25vw;
 	 }
-	 h2.red {
+	 h1.red {
 	 	margin-top:0;
 	 	-webkit-text-stroke-color: var(--red);
 	 	margin-left:5vw;
@@ -160,10 +160,10 @@ body.fade {
 
 	 .blue {
 	 	fill:var(--blue);
-		margin-left:30vw;
+		margin-left:20vw;
 	 }
 
-	 h2.blue {
+	 h1.blue {
 	 	margin-top:-20vw;
 	 	-webkit-text-stroke-color: var(--blue);
 	 	margin-left:-8vw;
@@ -183,7 +183,7 @@ body.fade {
 			fill:var(--pink);
 			margin-left:10vw;
 		}
-		h2.pink {
+		h1.pink {
  	 	margin-top:-20vw;
  	 	-webkit-text-stroke-color: var(--pink);
  	 	margin-left:-8vw;
@@ -203,18 +203,36 @@ body.fade {
 			fill:var(--green);
 			margin-left:-10vw;
 		}
-		h2.green {
+		h1.green {
  	 	margin-top:-20vw;
  	 	-webkit-text-stroke-color: var(--green);
  	 	left:7vw;
  	 }
-	 h2.green span {
+	 h1.green span {
 		 display:none;
 	 }
  	 .content_green {
  		 top:60vh !important;
  		 right: 10!important;
  	 }
+
+	 /**
+ 		* ----------------------------------------
+ 		* Contact Page
+ 		* ----------------------------------------
+ 		*/
+		.blank {
+			fill:none;
+			margin-left:-30vw;
+		}
+		h1.blank {
+ 	 	margin-top:0vw;
+ 	 	-webkit-text-stroke-color: var(--green);
+ 	 	left:45vw;
+ 	 }
+
+
+
 
 	/*************************************************
 

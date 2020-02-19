@@ -1,20 +1,10 @@
 
-.bio p {
-font-family: 'Poppins', sans-serif;
-font-weight: 300;
-font-size: calc(12px + 0.5vw);
-top: 4em;
-right: 10vw;
-font-weight: 400;
-margin: 16px 0;
-}
-
 .contact {
   display: flex;
   justify-content: space-around;
   align-items: baseline;
   height: 100vh;
-  background: linear-gradient(120deg, #22202B 50%, #202020 50%);
+  background: var(--dark);
 }
 .contact .header,
 .contact legend.header {
@@ -23,52 +13,12 @@ margin: 16px 0;
   font-size: 1.25rem;
   margin: 0.5em 0;
 }
-.contact .bio,
+
 .contact .contact-form {
   max-width: 100vw;
   margin-top: 20vh;
   margin-left: 25px;
   z-index:999;
-}
-.contact .bio .profile-img {
-  max-width: 12em;
-}
-.contact .bio .bio-link {
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: calc(12px + 0.2vw);
-  font-family: 'Cutive Mono', monospace;
-  display: inline-block;
-  float: left;
-  clear: left;
-  text-decoration: none;
-  color: #EEEEEE;
-  margin-top:1vw;
-  margin-bottom: 0.25em;
-  transition: color 300ms ease-in-out;
-}
-.contact .bio .bio-link i {
-  margin-left: 8px;
-}
-.contact .bio .bio-link::after {
-  display: block;
-  content: "";
-  height: 1px;
-  width: 0;
-  background: #00E1CE;
-  transition: width 300ms ease-in-out;
-}
-.contact .bio .bio-link:hover::after {
-  width: 100%;
-}
-.contact .bio .bio-link:hover {
-  color: #00E1CE;
-}
-
-.bio p {
-  text-transform: uppercase;
-  letter-spacing: 8px;
-  font-weight:600;
 }
 .contact .contact-form {
   color: #00E1CE;
@@ -131,10 +81,6 @@ margin: 16px 0;
 .contact {
   overflow: hidden;
   animation: Page 600ms ease-in-out forwards;
-}
-
-.bio {
-  animation: Bio 600ms ease-in-out forwards;
 }
 
 .contact-form {
