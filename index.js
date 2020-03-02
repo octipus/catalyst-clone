@@ -66,8 +66,8 @@ app.set("view engine", "pug");
 app.get("/", (req, res) => {
   res.render("index", { title: "Home" });
 });
-app.get("/about", (req, res) => {
-  res.render("about", { title: "About" });
+app.get("/services", (req, res) => {
+  res.render("services", { title: "Services" });
 });
 app.get("/contact", (req, res) => {
   res.render("contact", { title: "Contact" });

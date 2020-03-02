@@ -226,11 +226,63 @@ body.fade {
 			margin-left:-30vw;
 		}
 		h1.blank {
- 	 	margin-top:0vw;
+ 	 	margin-top:-2vh;
  	 	-webkit-text-stroke-color: var(--green);
  	 	left:45vw;
  	 }
 
+	 /**
+		 * ----------------------------------------
+		 * Services Page
+		 * ----------------------------------------
+		 */
+	 h1.services {
+		 top:-20vw;
+		 -webkit-text-stroke-color: var(--white);
+		 left:0vw;
+		}
+
+	 /*************************************************
+
+	 							SERVICES STYLE
+
+	 *************************************************/
+
+	 .grid {
+		 margin-top:30vh;
+	   display: grid;
+	   grid-auto-columns: 100%;
+	   grid-auto-rows: 150px;
+	   grid-gap: 10px;
+	 	z-index:9;
+	 }
+	 .grid h4 {
+	 	height:auto;
+	   display: flex;
+	   align-items: center;
+	   justify-content: center
+
+	 }
+	 .grid .box-cont {
+	   box-sizing: border-box;
+	   position: relative;
+	   background-color: #2E2E2F;
+	 	border: #fff 1px solid;
+	   overflow: hidden;
+	 }
+	 .box {
+	   transform: scale(0);
+	   position: absolute;
+	   background-color: var(--blue);
+	   border-radius: 100%;
+	   will-change: transform;
+	 }
+	 .multiple-col {
+	   grid-column: 3 / 5;
+	 }
+	 .multiple-row {
+	   grid-row: 1 / 3;
+	 }
 
 
 
@@ -321,6 +373,13 @@ body.fade {
 		position: relative;
 		height: 100%;
 	} */
+	#test:focus {
+		animation: grain 8s steps(10) infinite;
+		background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/wild_oliva.png);
+		position: fixed;
+		opacity: 0.4;
+		content: "";
+	}
 
 	.home:after, .contact:after{
 	  animation: grain 8s steps(10) infinite;

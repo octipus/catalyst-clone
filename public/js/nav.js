@@ -1,6 +1,6 @@
 /////////////////////   Dynamic Logo for each page   /////////////////////
 document.addEventListener('DOMContentLoaded', function(){
-  if (window.location.pathname == '/') {
+  if (window.location.pathname == '/' || window.location.pathname == '/services') {
     window.onload=function(){
      var elem = document.createElement("img");
      elem.setAttribute("src", "../media/SVG/logo-general.svg");
@@ -58,9 +58,11 @@ document.addEventListener('DOMContentLoaded', function(){
     var menuItems = document.querySelectorAll('.menu__item');
     var menuLinks = document.getElementsByClassName('menu__link');
     var dropdown = document.getElementById('dropdown');
+    var test = document.getElementById('test');
     var dropdownItems = document.querySelectorAll('.submenu__link');
 
     var active = false;
+    var sub_active = false;
 
     var toggleMenu = function() {
       if (!active) {
@@ -85,6 +87,10 @@ document.addEventListener('DOMContentLoaded', function(){
         active = false;
       }
     };
+
+    if (test) {
+      console.log("test");
+    }
 
     var pageDelay = function(e) {
         e.preventDefault();

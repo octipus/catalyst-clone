@@ -41,3 +41,17 @@ $( document ).ready(function() {
 			});
 	  } );
 });
+
+
+/////////////////////   Navigation Dropdown   /////////////////////
+
+$('.menu__item').click(function() {
+    if($(this).hasClass('active'))
+    {
+        $(this).addClass('inactive').removeClass('active');
+    }
+    else
+    {
+       $(this).addClass('active').removeClass('inactive');
+    }
+  });

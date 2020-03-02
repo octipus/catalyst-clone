@@ -37,11 +37,12 @@ block contact
           textarea(type="text" placeholder="Your Message..." class="form-control" id="message" name="message")
           label(for="message" class="fa fa-comment" aria-hidden="true")
         fieldset
-          button(type='button') Print on Demand
-          button(type='button') Manufactured Appearel
-        fieldset
-          button(type='button') Cosmetics
-          button(type='button') Fitness
+            label(for="service" class="fa fa-cog" aria-hidden="true")
+            select#service(name='services')
+              option I am interested in...
+              option(value='POD') Print on Demand
+              option(value='Manufactured') Manufactured Appearel
+              option(value='Cosmetics') Cosmetics
         fieldset
           button.fill-button#submit(type="submit" name="submit")
             span.fill-button-hover

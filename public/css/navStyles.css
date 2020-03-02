@@ -85,6 +85,7 @@
   list-style-type: none;
   transform: translate3d(0, -100%, 0);
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+
 }
 .menu__list--active {
   transform: translate3d(0, 0, 0);
@@ -95,33 +96,37 @@
 .submenu__list {
   text-align:center;
   list-style: none;
-  font-size: 2vh;
+  font-size: calc(8px + 0.8vw);
 }
 
 .submenu__link {
   text-decoration:none;
-  color: transparent;
-    -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: white;
+  color: white;
   letter-spacing: 3px;
   transition: 0.6s;
+  outline:none;
+}
+
+.active {
+  color: white;
+}
+
+
+#pod:before {
+  background-color: var(--blue);
 }
 
 #pod:hover {
   color: var(--red);
-  -webkit-text-stroke-color: transparent;
 }
 #manufactured:hover  {
   color: var(--blue);
-  -webkit-text-stroke-color: transparent;
 }
 #cosmetics:hover  {
   color: var(--pink);
-  -webkit-text-stroke-color: transparent;
 }
 #fitness:hover  {
   color: var(--green);
-  -webkit-text-stroke-color: transparent;
 }
 
 
@@ -141,13 +146,15 @@
 }
 .menu__item--active {
   transform: translate3d(0, 0, 0);
+  text-align:center;
 }
 .menu__link {
   display: inline-block;
   position: relative;
-  font-size: calc(16px + 5vw);
+  font-size: calc(16px + 3vw);
+  letter-spacing: 3px;
   padding: 15px 0;
-  font-weight: 600;
+  font-weight: var(--bold);
   color: white;
   text-decoration: none;
   color: transparent;
@@ -156,6 +163,7 @@
   text-align:right;
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
+
 
 .menu__link:before {
   content: "";
@@ -208,7 +216,7 @@ div.menu__brand--active {
   }
 
   .menu__link {
-    font-size: calc(16px + 7vw);
+    font-size: calc(16px + 4vw);
   }
 
   .menu__brand {

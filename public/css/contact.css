@@ -21,7 +21,7 @@
   z-index:999;
 }
 .contact .contact-form {
-  color: #00E1CE;
+  color: var(--green);
 }
 .contact .contact-form form fieldset {
   font-size: 1rem;
@@ -39,33 +39,37 @@
   color: #C7C7C7;
 }
 .contact .contact-form form input,
-.contact .contact-form form textarea {
+.contact .contact-form form textarea,
+.contact .contact-form form select {
   border: 0;
 }
 .contact .contact-form form input:focus,
-.contact .contact-form form textarea:focus {
+.contact .contact-form form textarea:focus,
+.contact .contact-form form select:focus {
   outline: none;
 }
 .contact .contact-form form input,
-.contact .contact-form form textarea {
+.contact .contact-form form textarea,
+.contact .contact-form form select  {
   display: block;
-  font-family: 'Poppins', monospace;
+  font-family: var(--font);
   letter-spacing: 3px;
   font-size: 0.765rem;
   padding: 0.5em 0;
   width: 30vw;
   min-width:100%;
   background: none;
-  color: #00E1CE;
+  color: var(--green);
   border-bottom: 1px solid #C7C7C7;
   transition: border 300ms ease-in-out;
 }
 .contact .contact-form form input:focus,
-.contact .contact-form form textarea:focus{
-  border-bottom: 1px solid #00E1CE;
+.contact .contact-form form textarea:focus,
+.contact .contact-form form select:focus{
+  border-bottom: 1px solid var(--green);
 }
 
-#form fieldset input:focus + .fa, #form fieldset textarea:focus + .fa {
+#form fieldset input:focus + .fa, #form fieldset textarea:focus + .fa, #form fieldset select:focus + .fa {
   color:#00E1CE;
   transition: border 300ms ease-in-out;
 }
@@ -85,6 +89,24 @@
 
 .contact-form {
   animation: contact-form 600ms ease-in-out forwards;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+#service:focus {
+  background-color: var(--dark);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+}
+
+#test {
+  background-color: transparent;
 }
 
 @keyframes Page {
@@ -126,7 +148,7 @@
 
 @media screen and (max-width: 980px) {
   .contact {
-    display:block !important;
+    display:inline-grid !important;
     margin-right:25px;
     margin-top:0;
   }
