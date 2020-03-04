@@ -1,28 +1,7 @@
 extends nav
 
 block index
-  main.home
-    .grid
-      .box-cont
-        .box
-      .box-cont.multiple-row
-        .box
-      .box-cont.multiple-col
-        h4
-          | test
-        .box
-      .box-cont
-        .box
-      .box-cont
-        .box
-      .box-cont
-        .box
-      .box-cont
-        .box
-      .box-cont
-        .box
-      .box-cont.multiple-col
-        .box
+  main.home.expertise
     .glitch 
       svg.logo-bg(xmlns='http://www.w3.org/2000/svg', viewbox='-50 0 1297.92 794.17')
         g#logo-wrap(data-name='logo-wrap')
@@ -40,10 +19,43 @@ block index
       .glitch__img
       .glitch__img
       .glitch__img
-    h1.content__title.services
-      | SERVICES 
-      span 
-  script(src='js/services.js')
+    .parent
+      .div1
+        h1.content__title.expertise
+          | EXPERTISE 
+          span  
+      .div2#two
+        p Branding
+      .div3#three 
+        p Product Design
+      .div4#four
+        p  Product Sourcing
+      .div5#five  
+        p Digital &amp; 
+          br 
+          | Performance 
+          br 
+          | Marketing
+      .div6#six 
+        p Web Development
+      .div7#seven
+        p Warehouse &amp; fulfilment
+      .div8#eight
+        p Fragrance, Cosmetic &amp; 
+          br
+          | skincare product development
+      .div9#nine
+        p social media management 
+      .div10#ten
+        p events &amp; pop-ups 
+      .div11#eleven
+        p health &amp; beauty manufacturing
+      .div12#twelve
+        p clothing &amp; accessory manufacturing
+      .div13#thirteen
+        p retailing  
+      .div14#fourteen
+        p customer service
   script(src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js')
   link(rel='stylesheet' type='text/css' href='css/homeStyles.css')
   script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js')

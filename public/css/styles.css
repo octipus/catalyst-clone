@@ -6,7 +6,7 @@
 :root {
 	--blue: #3B27BA;
 	--green: #13CA91;
-	--pink: #FF61BE;
+	--pink: #FF6595;
 	--red: #ff0040;
 	--white: #fff;
 	--dark: #252528;
@@ -237,54 +237,80 @@ body.fade {
 		 * ----------------------------------------
 		 */
 	 h1.services {
-		 top:-20vw;
+		 top:-10vw;
 		 -webkit-text-stroke-color: var(--white);
-		 left:0vw;
+		 left:20vw;
+		 position:absolute;
 		}
 
 	 /*************************************************
 
-	 							SERVICES STYLE
+	 							EXPERTISE STYLE
 
 	 *************************************************/
+.expertise {
+	margin:0 !important;
+}
 
-	 .grid {
-		 margin-top:30vh;
-	   display: grid;
-	   grid-auto-columns: 100%;
-	   grid-auto-rows: 150px;
-	   grid-gap: 10px;
-	 	z-index:9;
-	 }
-	 .grid h4 {
-	 	height:auto;
-	   display: flex;
-	   align-items: center;
-	   justify-content: center
+.home {
+	overflow:hidden;
+}
 
-	 }
-	 .grid .box-cont {
-	   box-sizing: border-box;
-	   position: relative;
-	   background-color: #2E2E2F;
-	 	border: #fff 1px solid;
-	   overflow: hidden;
-	 }
-	 .box {
-	   transform: scale(0);
-	   position: absolute;
-	   background-color: var(--blue);
-	   border-radius: 100%;
-	   will-change: transform;
-	 }
-	 .multiple-col {
-	   grid-column: 3 / 5;
-	 }
-	 .multiple-row {
-	   grid-row: 1 / 3;
-	 }
+.parent {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	z-index:9;
+	overflow:visible;
+}
 
+.div1 {
+	grid-area: 1 / 1 / 2 / 7;
+	background:transparent !important;
+	border:none !important;
+}
+.div2 { grid-area: 2 / 1 / 3 / 2; }
+.div3 { grid-area: 3 / 1 / 4 / 2; }
+.div4 { grid-area: 4 / 1 / 5 / 2; }
+.div5 { grid-area: 3 / 2 / 5 / 3; }
+.div6 { grid-area: 2 / 2 / 3 / 4; }
+.div7 { grid-area: 2 / 4 / 3 / 5; }
+.div8 { grid-area: 2 / 5 / 4 / 6; }
+.div9 { grid-area: 2 / 6 / 3 / 7; }
+.div10 { grid-area: 3 / 6 / 4 / 7; }
+.div11 { grid-area: 4 / 5 / 5 / 7; }
+.div12 { grid-area: 3 / 3 / 4 / 5; }
+.div13 { grid-area: 4 / 3 / 5 / 4; }
+.div14 { grid-area: 4 / 4 / 5 / 5; }
 
+.parent div {
+	background-color:hsla(240,4%,15%,0.7);
+	background-blend-mode: ;
+	border: 1px solid var(--white);
+	padding:20px;
+	margin:5px;
+}
+
+.parent div p {
+ font-family: var(--font);
+ text-transform: uppercase;
+ position: relative;
+    top: 20%;
+    text-align: center;
+}
+
+@media all and (max-width: 800px) {
+  .parent div {
+    grid-column: 1 / 6;
+  }
+	.parent {
+		display:block;
+		width:99%;
+		overflow:auto;
+	}
+}
 
 	/*************************************************
 
