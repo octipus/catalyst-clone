@@ -11,7 +11,9 @@ const port = process.env.PORT || "8000";
 
 app.use(express.static(path.join(__dirname, "public")));
 
-//contact form handler
+
+/////////////////////   CONTACT FORM HANDLER  /////////////////////
+
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.post('/send-email', function (req, res) {
@@ -21,6 +23,7 @@ app.post('/send-email', function (req, res) {
   var email = body.email;
   var social = body.social;
   var message = body.message;
+  var service = body.service;
 
   var composedMessage = {
       text: 'Hey Dan!\n\n' +
@@ -28,7 +31,8 @@ app.post('/send-email', function (req, res) {
         `Name: ${name} \n` +
         `Email Address: ${email} \n` +
         `Social: ${social} \n` +
-        `Message: ${message} \n\n`,
+        `Message: ${message} \n` +
+        `Service: ${service} \n\n`,
       subject: 'Website Contact Form'
     };
 
@@ -38,8 +42,8 @@ app.post('/send-email', function (req, res) {
       secure: true,
       auth: {
           // should be replaced with real sender's account
-          user: process.env.USER,
-          pass: process.env.KEY
+          user: 'bmxtavi@gmail.com',
+          pass: 'txwvhfnvhcawapws'
       }
   });
 
@@ -58,8 +62,8 @@ app.post('/send-email', function (req, res) {
 
 });
 
+/////////////////////   VIEWS  /////////////////////
 
-// Views
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 

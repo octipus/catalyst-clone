@@ -49,12 +49,13 @@ block contact
           textarea(type="text" placeholder="Your Message..." class="form-control" id="message" name="message")
           label(for="message" class="fa fa-comment" aria-hidden="true")
         fieldset
-            label(for="service" class="fa fa-cog" aria-hidden="true")
-            select#service(name='services')
+            label(for="services" class="fa fa-cog" aria-hidden="true" name="service")
+            select#service(name='service')
               option I am interested in...
               option(value='POD') Print on Demand
               option(value='Manufactured') Manufactured Appearel
               option(value='Cosmetics') Cosmetics
+              option(value='Fitness') Fitness
         fieldset
           button.fill-button#submit(type="submit" name="submit")
             span.fill-button-hover
