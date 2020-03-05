@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 
 
 const app = express();
-const port = process.env.PORT || "8000";
+const port = process.env.PORT || "80";
 
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -42,8 +42,8 @@ app.post('/send-email', function (req, res) {
       secure: true,
       auth: {
           // should be replaced with real sender's account
-          user: 'bmxtavi@gmail.com',
-          pass: 'txwvhfnvhcawapws'
+          user: process.env.USER,
+          pass: process.env.KEY
       }
   });
 
