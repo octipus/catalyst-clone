@@ -1,20 +1,25 @@
 require('dotenv').config();
 const path = require("path");
 const express = require("express");
-const nodeMailer = require("nodemailer");
+const nodemailer = require("nodemailer");
+const sgTransport = require('nodemailer-sendgrid-transport');
 const bodyParser = require('body-parser');
-
-
 
 const app = express();
 const port = process.env.PORT || "80";
 
-app.use(express.static(path.join(__dirname, "public")));
-
-
 /////////////////////   CONTACT FORM HANDLER  /////////////////////
 
 app.use(bodyParser.urlencoded({extended: true}));
+
+var options = {
+  auth: {
+    api_user: process.env.USER,
+    api_key: process.env.SENDGRID_API_KEY
+  }
+}
+
+var client = nodemailer.createTransport(sgTransport(options));
 
 app.post('/send-email', function (req, res) {
 
@@ -26,6 +31,8 @@ app.post('/send-email', function (req, res) {
   var service = body.service;
 
   var composedMessage = {
+      from: 'website@justcatalyst.com',
+      to: 'octavian@justcatalyst.com',
       text: 'Hey Dan!\n\n' +
         `${name} has contacted you through your website. Here is their contact information and message: \n\n` +
         `Name: ${name} \n` +
@@ -36,33 +43,23 @@ app.post('/send-email', function (req, res) {
       subject: 'Website Contact Form'
     };
 
-  let transporter = nodeMailer.createTransport({
-      host: 'smtp.gmail.com',
-      port: 465,
-      secure: true,
-      auth: {
-          // should be replaced with real sender's account
-          user: process.env.USER,
-          pass: process.env.KEY
-      }
-  });
-
-  transporter.sendMail({
-      from: `${name}`,
-      to: 'octavian@justcatalyst.com',
-      subject: composedMessage.subject,
-      text: composedMessage.text
-    }, (error, info) => {
-      if (error) {
-        return console.log(error);
-      } else {
+  client.sendMail(composedMessage, function(err, info){
+      if (err ){
+        res.redirect("/");
+      }else {
         res.redirect("contact");
       }
-    });
+
+  });
+
 
 });
 
+
+
 /////////////////////   VIEWS  /////////////////////
+
+app.use(express.static(path.join(__dirname, "public")));
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
@@ -72,6 +69,9 @@ app.get("/", (req, res) => {
 });
 app.get("/expertise", (req, res) => {
   res.render("expertise", { title: "Expertise" });
+});
+app.get("/projects", (req, res) => {
+  res.render("projects", { title: "Projects" });
 });
 app.get("/contact", (req, res) => {
   res.render("contact", { title: "Contact" });

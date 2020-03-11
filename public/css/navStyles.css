@@ -113,14 +113,14 @@
 
 
 #pod:before {
-  background-color: var(--blue);
+  background-color: var(--mainPink);
 }
 
 #pod:hover {
   color: var(--red);
 }
 #manufactured:hover  {
-  color: var(--blue);
+  color: var(--mainPink);
 }
 #cosmetics:hover  {
   color: var(--pink);
@@ -133,7 +133,7 @@
 
 .menu__brand {
 
-  background: var(--blue);
+  background: var(--mainPink);
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
   transform: translate3d(0, 100%, 0);
 }
@@ -162,6 +162,7 @@
     -webkit-text-stroke-color: white;
   text-align:right;
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  outline:0;
 }
 
 
@@ -172,7 +173,7 @@
   left: 50%;
   width: 0.1px;
   height: 5px;
-  background: var(--blue);
+  background: var(--mainPink);
   transform: translateX(-50%);
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }

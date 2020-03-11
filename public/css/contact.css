@@ -21,7 +21,7 @@
   z-index:999;
 }
 .contact .contact-form {
-  color: var(--green);
+  color: var(--mainPink);
 }
 .contact .contact-form form fieldset {
   font-size: 1rem;
@@ -59,14 +59,14 @@
   width: 30vw;
   min-width:100%;
   background: none;
-  color: var(--green);
+  color: var(--mainPink);
   border-bottom: 1px solid #C7C7C7;
   transition: border 300ms ease-in-out;
 }
 .contact .contact-form form input:focus,
 .contact .contact-form form textarea:focus,
 .contact .contact-form form select:focus{
-  border-bottom: 1px solid var(--green);
+  border-bottom: 1px solid var(--mainPink);
 }
 
 #form fieldset input:focus + .fa, #form fieldset textarea:focus + .fa, #form fieldset select:focus + .fa {
