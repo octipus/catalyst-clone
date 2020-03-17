@@ -5,7 +5,12 @@ const nodemailer = require("nodemailer");
 const sgTransport = require('nodemailer-sendgrid-transport');
 const bodyParser = require('body-parser');
 
+const compression = require('compression');
+const helmet = require('helmet');
+
+
 const app = express();
+app.use(helmet());
 const port = process.env.PORT || "80";
 
 /////////////////////   CONTACT FORM HANDLER  /////////////////////
@@ -58,6 +63,8 @@ app.post('/send-email', function (req, res) {
 
 
 /////////////////////   VIEWS  /////////////////////
+
+app.use(compression()); //Compress all routes
 
 app.use(express.static(path.join(__dirname, "public")));
 

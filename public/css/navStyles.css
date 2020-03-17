@@ -96,7 +96,8 @@
 .submenu__list {
   text-align:center;
   list-style: none;
-  font-size: calc(8px + 0.8vw);
+  font-size: calc(6px + 0.8vw);
+  padding:0;
 }
 
 .submenu__link {
@@ -217,7 +218,7 @@ div.menu__brand--active {
   }
 
   .menu__link {
-    font-size: calc(16px + 4vw);
+    font-size: calc(9px + 4vw);
   }
 
   .menu__brand {

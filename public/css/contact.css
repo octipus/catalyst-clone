@@ -87,6 +87,17 @@
   animation: Page 600ms ease-in-out forwards;
 }
 
+.left p, .contact-bold {
+  font-family: var(--font);
+  margin:0
+}
+
+.contact-bold {
+  font-weight: var(--bold);
+  text-transform: uppercase;
+  margin-bottom:15px !important;
+}
+
 .contact-form {
   animation: contact-form 600ms ease-in-out forwards;
 }
