@@ -7,10 +7,21 @@ const bodyParser = require('body-parser');
 
 const compression = require('compression');
 const helmet = require('helmet');
-
+const robots = require('express-robots-txt');
+const expressSitemapXml = require('express-sitemap-xml')
 
 const app = express();
+
+
 app.use(helmet());
+app.use(robots({UserAgent: '*', Disallow: '/', CrawlDelay: '5', Sitemap: 'localhost/sitemap.xml'}))
+app.use(expressSitemapXml(getUrls, 'localhost'))
+
+async function getUrls () {
+  return await getUrlsFromDatabase()
+}
+
+
 const port = process.env.PORT || "80";
 
 /////////////////////   CONTACT FORM HANDLER  /////////////////////
@@ -57,7 +68,6 @@ app.post('/send-email', function (req, res) {
 
   });
 
-
 });
 
 
@@ -95,6 +105,10 @@ app.get("/cosmetics", (req, res) => {
 app.get("/fitness", (req, res) => {
   res.render("fitness", { title: "Fitness" });
 });
+app.get("/sitemap.xml", (req, res) => {
+  res.render("sitemap", { title: "siemap" });
+});
+
 
 
 
