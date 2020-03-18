@@ -39,9 +39,7 @@
 	z-index:999;
 }
 
-.content__title span {
-	margin-left:35vh;
-}
+
 
 .desc-content {
 	position:absolute;
@@ -77,11 +75,11 @@
 	.glitch {
 		opacity: 0.7;
 	}
-	.fill-button {
+	.home-button {
 		width:45% !important;
 	}
 	.desc-content {
-		top: 63vh;
+		top: 50%;
 		right:0vw;
 	}
 	.content__title {
@@ -95,6 +93,24 @@
 	.fill-button-text {
 		top: 15px;
 		font-size:12px;
+	}
+}
+
+@media screen and (min-width: 1025px) {
+	.content__title span {
+		margin-left:35vh;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.content__text {
+		font-size: calc(12px + 1vw);
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.content__text {
+		font-size: calc(12px + 0.2vw);
 	}
 }
 

@@ -160,7 +160,7 @@ body.fade {
 	 */
 
 	 .blue {
-	 	fill:var(--mainPink);
+	 	fill:var(--blue);
 		margin-left:20vw;
 	 }
 
@@ -269,6 +269,95 @@ body.fade {
 		 letter-spacing: 0px !important;
 	 }
 
+
+
+	@media screen and (max-width: 920px) {
+		/* Projects */
+		h1.projects {
+	 		top:0;
+	 		margin:0;
+      bottom: 65vh;
+			position:sticky;
+	 	}
+	 	.project-button {
+	 		margin: 0 1em;
+	 	}
+
+		.logo-projects {
+			margin-left: -43vw;
+		}
+
+		/*Red*/
+		 .red {
+		 	margin-left:-15vw;
+		 }
+		 h1.red {
+		 	bottom:10vh;
+		 	margin-left:5vw;
+		 }
+		 .content_red {
+			 top:55vh !important;
+			 left:10vw !important;
+		 }
+		 .content__title span {
+			 margin:0;
+		 }
+
+		 /*Blue */
+		 .blue {
+			margin-left:-20vw;
+		 }
+
+		 h1.blue {
+			margin-top:-10px;
+			bottom: 10vh;
+		 	margin-left:0vw;
+		 }
+		 .content_blue {
+			 top:50vh !important;
+			 left:10vw !important;
+		 }
+
+		 /*Pink */
+		 .pink {
+ 			margin-left:50vw;
+ 		}
+ 		h1.pink {
+  	  bottom:10vh;
+  	 	margin-left:0vw;
+  	 }
+  	 .content_pink {
+  		 top:50vh !important;
+  		 left:10vw !important;
+  	 }
+
+		 /* Green */
+		 .green {
+	 			margin-left:7vw;
+	 		}
+	 		h1.green {
+	  	 	bottom:0;
+	  	 	left:27vw;
+	  	 }
+	  	.content_green {
+	  		top:60vh !important;
+	  		right: 10!important;
+	  	}
+	 }
+
+	 @media screen and (max-width: 320px) {
+	 	.fill-button {
+	 		width:60% !important;
+	 	}
+	 }
+
+	 @media screen and (min-width: 1024px) {
+		 h1.green {
+ 			bottom:0;
+ 			left:27vw;
+ 		 }
+	 }
+
 	 /*************************************************
 
 	 							EXPERTISE STYLE
@@ -336,14 +425,10 @@ body.fade {
 		width:99%;
 		overflow:auto;
 	}
-
 }
 
-@media all and (max-width: 900px) {
-	h1.projects {
-		top:10vw;
-	}
-}
+
+
 
 	/*************************************************
 

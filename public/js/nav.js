@@ -1,6 +1,6 @@
 /////////////////////   Dynamic Logo for each page   /////////////////////
 document.addEventListener('DOMContentLoaded', function(){
-  if (window.location.pathname == '/' || window.location.pathname == '/services' || window.location.pathname == '/expertise') {
+  if (window.location.pathname == '/' || window.location.pathname == '/services' || window.location.pathname == '/expertise' || window.location.pathname == '/projects' || window.location.pathname == '/contact') {
     window.onload=function(){
      var elem = document.createElement("img");
      elem.setAttribute("src", "../media/SVG/logo-general.svg");
