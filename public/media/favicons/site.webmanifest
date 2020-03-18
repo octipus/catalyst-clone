@@ -1,6 +1,7 @@
 {
-    "name": "",
-    "short_name": "",
+    "short_name": "CATALYST",
+    "name": "Catalyst - Your Brand Revolution",
+    "description": "Helping Celebrities and Influencers to launch their own products and brands. We pride ourselves on our sought-after product offering. From sustainable cut & sew apparel to trend-inducing accessories; we build brands that resonate with global consumers.",
     "icons": [
         {
             "src": "/media/favicons/android-chrome-96x96.png",
@@ -8,7 +9,9 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "display": "standalone"
+    "start_url": "/",
+    "background_color": "#252528",
+    "display": "fullscreen",
+    "scope": "/",
+    "theme_color": "#FF6695"
 }

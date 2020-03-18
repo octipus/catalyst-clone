@@ -4,6 +4,10 @@ const express = require("express");
 const nodemailer = require("nodemailer");
 const sgTransport = require('nodemailer-sendgrid-transport');
 const bodyParser = require('body-parser');
+const https = require('https')
+const http = require('http');
+const fs = require('fs')
+
 
 const compression = require('compression');
 const helmet = require('helmet');
@@ -14,15 +18,16 @@ const app = express();
 
 
 app.use(helmet());
-app.use(robots({UserAgent: '*', Disallow: '/', CrawlDelay: '5', Sitemap: 'localhost/sitemap.xml'}))
+app.use(robots({UserAgent: '*', Disallow: '/', CrawlDelay: '5', Sitemap: '/sitemap.xml'}))
 app.use(expressSitemapXml(getUrls, 'localhost'))
 
 async function getUrls () {
   return await getUrlsFromDatabase()
 }
 
+const httpPort = process.env.HTTP || "80";
+const httpsPort = process.env.HTTPS || "443";
 
-const port = process.env.PORT || "80";
 
 /////////////////////   CONTACT FORM HANDLER  /////////////////////
 
@@ -71,7 +76,6 @@ app.post('/send-email', function (req, res) {
 });
 
 
-
 /////////////////////   VIEWS  /////////////////////
 
 app.use(compression()); //Compress all routes
@@ -111,7 +115,34 @@ app.get("/sitemap.xml", (req, res) => {
 
 
 
+// Listen both http & https ports
+const httpServer = http.createServer(app);
+const httpsServer = https.createServer({
+  key: fs.readFileSync('server.key'),
+  cert: fs.readFileSync('server.cert'),
+}, app);
 
-app.listen(port, () => {
-  console.log(`Listening to requests on http://localhost:${port}`);
+httpServer.listen(80, () => {
+    console.log(`HTTP Server running on http://localhost:${httpPort}`);
 });
+
+httpsServer.listen(443, () => {
+    console.log(`HTTPS Server running on http://localhost:${httpsPort}`);
+});
+
+
+
+// Listen both http & https ports
+// const httpServer = http.createServer(app);
+// const httpsServer = https.createServer({
+//   key: fs.readFileSync('/etc/letsencrypt/live/justcatalyst.org/privkey.pem'),
+//   cert: fs.readFileSync('/etc/letsencrypt/live/justcatalyst.org/fullchain.pem'),
+// }, app);
+//
+// httpServer.listen(80, () => {
+//     console.log(`HTTP Server running on http://localhost:${httpPort}`);
+// });
+//
+// httpsServer.listen(443, () => {
+//     console.log(`HTTPS Server running on http://localhost:${httpsPort}`);
+// });
