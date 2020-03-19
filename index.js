@@ -34,6 +34,7 @@ const httpsPort = process.env.HTTPS || "443";
 app.use(bodyParser.urlencoded({extended: true}));
 
 var options = {
+  service: 'SendGrid',
   auth: {
     api_user: process.env.USER,
     api_key: process.env.SENDGRID_API_KEY
