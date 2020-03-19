@@ -56,6 +56,10 @@ body.fade {
 		z-index:999999999999999;
 }
 
+.mainPink {
+	fill:var(--mainPink);
+}
+
 
 .outer {
 	fill:#fff;
