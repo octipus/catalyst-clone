@@ -4,6 +4,7 @@
   justify-content: space-around;
   align-items: baseline;
   height: 100vh;
+  width:100%;
   background: var(--dark);
 }
 .contact .header,
@@ -16,8 +17,7 @@
 
 .contact .contact-form {
   max-width: 100vw;
-  margin-top: 10vh;
-  margin-left: 25px;
+  margin-top: 2vh;
   z-index:999;
 }
 .contact .contact-form {
@@ -88,7 +88,7 @@
 }
 
 .bio {
-  margin-top:10vh;
+  /* margin-top:10vh; */
 }
 
 .left p, .contact-bold {

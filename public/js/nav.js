@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function(){
     }else if (window.location.pathname == '/manufacturing') {
       window.onload=function(){
        var elem = document.createElement("img");
-       elem.setAttribute("src", "../media/SVG/logo-manufacturing.svg");
+       elem.setAttribute("src", "../media/SVG/logo-manufactured.svg");
        elem.setAttribute("width", "250");
        elem.setAttribute("alt", "Catalyst Logo");
        document.getElementsByClassName("header__title")[0].appendChild(elem);

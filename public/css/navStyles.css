@@ -121,7 +121,7 @@
   color: var(--red);
 }
 #manufactured:hover  {
-  color: var(--mainPink);
+  color: var(--blue);
 }
 #cosmetics:hover  {
   color: var(--pink);

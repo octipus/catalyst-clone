@@ -4,12 +4,12 @@
 
 *************************************************/
 :root {
-	--blue: #3B27BA;
-	--green: #13CA91;
-	--pink: #FF6595;
-	--red: #ff0040;
-	--white: #fff;
-	--dark: #252528;
+	--blue: #188DDC;
+	--green: #648A8B;
+	--pink: #F8CEF2;
+	--red: #FFA684;
+	--white: #EDEDEF;
+	--dark: #202020;
 	--mainPink: #FF6595;
 
 	--bold: 900;
@@ -36,6 +36,7 @@ body {
   margin:0;
   opacity: 1;
   transition: 1s opacity;
+	overflow:hidden;
 }
 
 body.fade {
@@ -149,7 +150,7 @@ body.fade {
 	 }
 	 h1.red {
 	 	margin-top:0;
-	 	-webkit-text-stroke-color: var(--red);
+	 	/* -webkit-text-stroke-color: var(--red); */
 	 	margin-left:5vw;
 	 }
 	 .content_red {
@@ -170,7 +171,7 @@ body.fade {
 
 	 h1.blue {
 	 	margin-top:-20vw;
-	 	-webkit-text-stroke-color: var(--blue);
+	 	/* -webkit-text-stroke-color: var(--blue); */
 	 	margin-left:-8vw;
 	 }
 	 .content_blue {
@@ -190,7 +191,7 @@ body.fade {
 		}
 		h1.pink {
  	 	margin-top:-20vw;
- 	 	-webkit-text-stroke-color: var(--pink);
+ 	 	/* -webkit-text-stroke-color: var(--pink); */
  	 	margin-left:-8vw;
  	 }
  	 .content_pink {
@@ -210,7 +211,7 @@ body.fade {
 		}
 		h1.green {
  	 	margin-top:-20vw;
- 	 	-webkit-text-stroke-color: var(--green);
+ 	 	/* -webkit-text-stroke-color: var(--green); */
  	 	left:7vw;
  	 }
 	 h1.green span {
@@ -228,11 +229,12 @@ body.fade {
  		*/
 		.blank {
 			fill:none;
-			margin-left:-30vw;
+			margin-left:30vw;
 		}
 		h1.blank {
- 	 	margin-top:-2vh;
+ 	 	margin-top:4vh;
  	 	-webkit-text-stroke-color: var(--mainPink);
+		-webkit-text-stroke-width: 2px;
  	 	left:45vw;
  	 }
 
@@ -276,6 +278,17 @@ body.fade {
 
 
 	@media screen and (max-width: 920px) {
+		/*Contact */
+		.blank {
+			fill:none;
+			margin-left:10vw;
+		}
+		h1.blank {
+ 	 	margin-top:10vh;
+ 	 	left:0vw;
+		bottom:0;
+ 	 }
+
 		/* Projects */
 		h1.projects {
 	 		top:0;
@@ -316,6 +329,7 @@ body.fade {
 			margin-top:-10px;
 			bottom: 10vh;
 		 	margin-left:0vw;
+			font-size: 8vw;
 		 }
 		 .content_blue {
 			 top:50vh !important;
@@ -406,7 +420,6 @@ body.fade {
 
 .parent div {
 	background-color:hsla(240,4%,15%,0.7);
-	background-blend-mode: ;
 	border: 1px solid var(--white);
 	padding:20px;
 	margin:5px;

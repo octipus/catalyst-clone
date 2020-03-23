@@ -127,7 +127,7 @@
 	width: var(--glitch-width);
 	height: var(--glitch-height);
 	overflow: hidden;
-
+	z-index: 9;
 }
 
 .glitch__img {
