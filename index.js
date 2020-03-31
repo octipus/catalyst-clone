@@ -18,8 +18,8 @@ const app = express();
 
 
 app.use(helmet());
-app.use(robots({UserAgent: '*', Disallow: '/', CrawlDelay: '5', Sitemap: '/sitemap.xml'}))
-app.use(expressSitemapXml(getUrls, 'localhost'))
+app.use(robots({UserAgent: '*', Disallow: '/public/media', CrawlDelay: '120', Sitemap: '/sitemap.xml'}))
+app.use(expressSitemapXml(getUrls, 'https://justcatalyst.org/'))
 
 async function getUrls () {
   return await getUrlsFromDatabase()
