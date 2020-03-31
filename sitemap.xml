@@ -1,52 +1,38 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
+<urlset xmlns="http://www.google.com/schemas/sitemap/0.84" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
-  <loc>http://45.76.140.126/</loc>
-  <lastmod>2020-03-17T16:21:33+00:00</lastmod>
-  <priority>1.00</priority>
+<loc>http://justcatalyst.org/</loc>
+<changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://45.76.140.126/pod</loc>
-  <lastmod>2020-03-17T16:21:33+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>http://justcatalyst.org/#</loc>
+<changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://45.76.140.126/manufacturing</loc>
-  <lastmod>2020-03-17T16:21:33+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>http://justcatalyst.org/pod</loc>
+<changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://45.76.140.126/cosmetics</loc>
-  <lastmod>2020-03-17T16:21:33+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>http://justcatalyst.org/manufacturing</loc>
+<changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://45.76.140.126/fitness</loc>
-  <lastmod>2020-03-17T16:21:33+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>http://justcatalyst.org/cosmetics</loc>
+<changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://45.76.140.126/expertise</loc>
-  <lastmod>2020-03-17T16:21:33+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>http://justcatalyst.org/fitness</loc>
+<changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://45.76.140.126/projects</loc>
-  <lastmod>2020-03-17T16:21:33+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>http://justcatalyst.org/expertise</loc>
+<changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://45.76.140.126/contact</loc>
-  <lastmod>2020-03-17T16:21:33+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>http://justcatalyst.org/projects</loc>
+<changefreq>monthly</changefreq>
 </url>
-
-
+<url>
+<loc>http://justcatalyst.org/contact</loc>
+<changefreq>monthly</changefreq>
+</url>
 </urlset>

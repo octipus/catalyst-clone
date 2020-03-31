@@ -63,6 +63,7 @@
   width: 100%;
   visibility: hidden;
   font-family: var(--font);
+  font-display: swap;
   font-weight: var(--bold);
 }
 .menu--active {
@@ -311,6 +312,7 @@ main h1 > a {
 
 #circle text {
   font-family: var(--font);
+  font-display: swap;
   font-size: 16px;
   letter-spacing: 3px;
 }

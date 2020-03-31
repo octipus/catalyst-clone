@@ -427,6 +427,7 @@ body.fade {
 
 .parent div p {
  font-family: var(--font);
+ font-display: swap;
  text-transform: uppercase;
  position: relative;
     top: 20%;
@@ -468,6 +469,7 @@ body.fade {
 	  text-decoration:none;
 	  cursor: pointer;
 	  font-family: var(--font);
+		font-display: swap;
 		font-weight: var(--regular);
 		font-size:1em;
 		text-transform: uppercase;

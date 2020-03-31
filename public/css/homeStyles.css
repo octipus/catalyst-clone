@@ -30,6 +30,7 @@
 	margin-left: -20vh;
 	position: relative;
 	font-family: var(--font);
+	font-display: swap;
 	font-weight: var(--bold);
 	line-height:1;
 	color: transparent;
@@ -51,6 +52,7 @@
 
 .content__text {
 	font-family: var(--font);
+	font-display: swap;
 	font-weight: var(--regular);
 	font-size: calc(12px + 0.2vw);
 	top: 4em;

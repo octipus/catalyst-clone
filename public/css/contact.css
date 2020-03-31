@@ -53,6 +53,7 @@
 .contact .contact-form form select  {
   display: block;
   font-family: var(--font);
+  font-display: swap;
   letter-spacing: 3px;
   font-size: 0.765rem;
   padding: 0.5em 0;
@@ -88,11 +89,14 @@
 }
 
 .bio {
-  /* margin-top:10vh; */
+  top: 25vh;
+
+  position: absolute;
 }
 
 .left p, .contact-bold {
   font-family: var(--font);
+  font-display: swap;
   margin:0;
 }
 
@@ -169,18 +173,21 @@ select {
 @media screen and (max-width: 980px) {
   .contact {
     display:inline-grid !important;
-    margin-right:25px;
     margin-top:0;
   }
   .profile-img {
     display:none;
+  }
+
+  .bio {
+    left: 20vw;
   }
 }
 
 @media screen and (max-width: 55em) {
   .contact .contact-form {
     max-width: 100vw;
-    margin-top: 10vh;
+    margin-top: 25vh;
     margin-left: 0px;
   }
   .fill-button {

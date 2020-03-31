@@ -67,8 +67,10 @@ app.post('/send-email', function (req, res) {
 
   client.sendMail(composedMessage, function(err, info){
       if (err ){
+        console.log(err)
         res.redirect("/");
       }else {
+        console.log('Message sent: ' + info.response);
         res.redirect("contact");
       }
 
