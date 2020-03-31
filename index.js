@@ -41,6 +41,8 @@ var options = {
   }
 }
 
+//use real deta until fix .env on ubuntu
+
 var client = nodemailer.createTransport(sgTransport(options));
 
 app.post('/send-email', function (req, res) {
@@ -133,7 +135,7 @@ httpsServer.listen(443, () => {
     console.log(`HTTPS Server running on http://localhost:${httpsPort}`);
 });
 
-
+// remember to delete above and uncommment below on deployment
 
 // Listen both http & https ports
 // const httpServer = http.createServer(app);
