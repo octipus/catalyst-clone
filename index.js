@@ -140,8 +140,8 @@ httpsServer.listen(443, () => {
 // Listen both http & https ports
 // const httpServer = http.createServer(app);
 // const httpsServer = https.createServer({
-//   key: fs.readFileSync('/etc/letsencrypt/live/justcatalyst.org/privkey.pem'),
-//   cert: fs.readFileSync('/etc/letsencrypt/live/justcatalyst.org/fullchain.pem'),
+//   key: fs.readFileSync('/etc/letsencrypt/live/justcatalyst.com/privkey.pem'),
+//   cert: fs.readFileSync('/etc/letsencrypt/live/justcatalyst.com/fullchain.pem'),
 // }, app);
 //
 // httpServer.listen(80, () => {
