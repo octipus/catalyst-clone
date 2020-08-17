@@ -152,9 +152,10 @@ body.fade {
 	 	margin-top:0;
 	 	/* -webkit-text-stroke-color: var(--red); */
 	 	margin-left:5vw;
+		margin-top:-20vh;
 	 }
 	 .content_red {
-		 top:70vh !important;
+		 top:55vh !important;
 		 left:10vw !important;
 	 }
 
@@ -313,7 +314,7 @@ body.fade {
 		 	margin-left:5vw;
 		 }
 		 .content_red {
-			 top:55vh !important;
+			 top:40vh !important;
 			 left:10vw !important;
 		 }
 		 .content__title span {
@@ -345,7 +346,7 @@ body.fade {
   	 	margin-left:0vw;
   	 }
   	 .content_pink {
-  		 top:50vh !important;
+  		 top:45vh !important;
   		 left:10vw !important;
   	 }
 
@@ -354,12 +355,11 @@ body.fade {
 	 			margin-left:7vw;
 	 		}
 	 		h1.green {
-	  	 	bottom:0;
-	  	 	left:27vw;
+	  	 	bottom:20vh;
 	  	 }
 	  	.content_green {
-	  		top:60vh !important;
-	  		right: 10!important;
+	  		top:45vh !important;
+	  		left:10vw !important;
 	  	}
 	 }
 
@@ -375,6 +375,27 @@ body.fade {
  			left:27vw;
  		 }
 	 }
+
+
+
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+		object-fit: cover;
+}
 
 	 /*************************************************
 
@@ -456,7 +477,7 @@ body.fade {
 	.fill-button {
 		height:50px;
 		margin-top:40px;
-		margin-left:10px;
+		margin-right:10px;
 	  position: relative;
 	  overflow:hidden;
 	  display:inline-block;

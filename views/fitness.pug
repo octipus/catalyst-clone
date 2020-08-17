@@ -1,6 +1,9 @@
 extends nav
 
 block fitness
+  .fullscreen-bg
+    video.fullscreen-bg__video(loop='' muted='' autoplay='' poster='img/videoframe.jpg')
+      source(src='/video' type='video/webm')
   main.home
     .glitch 
       svg.logo-bg.green(xmlns='http://www.w3.org/2000/svg', viewbox='-50 0 1297.92 794.17')
@@ -23,11 +26,16 @@ block fitness
       | FITNESS 
       span
     .desc-content.content_green
+      a(href="/pod" rel="noopener")
+        i.fa.fa-angle-left.fa-1x.icon-3d.prev
       p.content__text
         | Our fitness and mobile app experts allow us to build leading fitness brands and digital products.
         br
         br
         | We pride ourselves on user-experience, our 24 hour support team and industry knowledge of creating bepoke guides to meet your needs and your communities desires.
+      a(href="/contact").fill-button.home-button
+        span.fill-button-hover
+          span.fill-button-text Contact us
   script(src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js')
   link(rel='stylesheet' type='text/css' href='css/homeStyles.css')
   script(src='js/functions.js')

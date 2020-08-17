@@ -171,7 +171,7 @@
 .menu__link:before {
   content: "";
   position: absolute;
-  bottom: 50%;
+  top: 50%;
   left: 50%;
   width: 0.1px;
   height: 5px;
@@ -272,6 +272,7 @@ main h1 > a {
   top:95%;
 }
 
+
 @media screen and (max-width: 768px) {
   .social {
     top:85%;
@@ -283,6 +284,7 @@ main h1 > a {
   -webkit-animation: icon3d 200ms 10;
   animation: icon3d 200ms 10;
   color: #fff;
+  font-size: 20px !important;
 }
 .icon-3d:hover {
   -webkit-animation: icon3d 200ms infinite;

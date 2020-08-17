@@ -50,6 +50,10 @@
 	z-index:999;
 }
 
+.next, .prev {
+	font-size: 30px !important;
+}
+
 .content__text {
 	font-family: var(--font);
 	font-display: swap;
@@ -57,7 +61,7 @@
 	font-size: calc(12px + 0.2vw);
 	top: 4em;
 	right: 10vw;
-	text-align: right;
+	text-align: left;
 	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.25);
 }
 
