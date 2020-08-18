@@ -2,7 +2,7 @@ extends nav
 
 block fitness
   .fullscreen-bg
-    video.fullscreen-bg__video(loop='' muted='' autoplay='' poster='img/videoframe.jpg')
+    video.fullscreen-bg__video(loop='' muted='' autoplay='')
       source(src='/video' type='video/webm')
   main.home
     .glitch 
@@ -25,17 +25,42 @@ block fitness
     h1.content__title.green
       | FITNESS 
       span
-    .desc-content.content_green
-      a(href="/pod" rel="noopener")
-        i.fa.fa-angle-left.fa-1x.icon-3d.prev
-      p.content__text
+    .content__header.header__green
+      h2 
+        | MONETISE YOUR FOLLOWING.
+        br
+        | ELEVATE YOUR REPUTATION.
+        br
+        | REDUCE YOUR WORKLOAD.
+      p.content__head
         | Our fitness and mobile app experts allow us to build leading fitness brands and digital products.
         br
         br
-        | We pride ourselves on user-experience, our 24 hour support team and industry knowledge of creating bepoke guides to meet your needs and your communities desires.
-      a(href="/contact").fill-button.home-button
+        | We pride ourselves on user-experience, our 24 hour support team and industry knowledge of creating bespoke solutions to meet your needs and your communities desires.
+    .desc-content.content_green
+      a(href="/pod" rel="noopener")
+        i.fa.fa-angle-left.fa-1x.icon-3d.prev
+      p.content__text.tile-container
+        span.tile APP PRODUCTION +
+        span.tile BRANDED YOUR WAY +
+        span.tile ACQUIRER SETUP +
+        span.tile ONGOING INNOVATION +
+      a(href="/contact").fill-button.full-btn
         span.fill-button-hover
-          span.fill-button-text Contact us
+          span.fill-button-text Contact us        
+      .pop-container
+        .pop.pop-1
+          h3 APP PRODUCTION &#38; PUBLISHING
+          p WE WORK WITH HAND SELECT CLIENTS TO DESIGN, CONSTRUCT AND PUBLISH YOUR OWN IOS/ANDROID FITNESS APP.
+        .pop.pop-2
+          h3 FULLY CUSTOMISED TO YOUR BRAND
+          p WE DON’T DO COOKIE-CUTTERS. WE BUILD A UNIQUE PLATFORM TO DELIVER YOUR CONTENT TO YOUR FOLLOWERS.
+        .pop.pop-3
+          h3 ACQUIRER SETUP
+          p STREAMLINED PAYMENT GATEWAYS ALLOW FOR INSTANT DEPOSITS OF CUSTOMER FUNDS WHEN A PURCHASE OR MONTHLY SUBSCRIPTION IS MADE.
+        .pop.pop-4
+          h3 ONGOING IMPROVEMENT &#38; INNOVATION
+          p WE CONTINUOUSLY MONITOR AND UPDATE YOUR PLATFORM BASED ON IN-APP FEEDBACK FROM CUSTOMERS ENSURING NEAR-PERFECT UX.
   script(src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js')
   link(rel='stylesheet' type='text/css' href='css/homeStyles.css')
   script(src='js/functions.js')

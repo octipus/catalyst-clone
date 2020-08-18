@@ -37,6 +37,7 @@ body {
   opacity: 1;
   transition: 1s opacity;
 	overflow:hidden;
+	font-family: var(--font);
 }
 
 body.fade {
@@ -44,103 +45,51 @@ body.fade {
     transition: 1s opacity;
 }
 
-
-
-/*************************************************
-
-							SVG LOGO  Animation
-
-*************************************************/
-.logo-bg {
-	margin-left:-10vw;
-	height: 100%;
-		z-index:999999999999999;
+.full-btn {
+ width:100% !important;
 }
 
-.mainPink {
-	fill:var(--mainPink);
+.pop-container {
+	 visibility: hidden;
+ }
+
+ .pop {
+  cursor: pointer;
+  position: absolute;
+  height: 50vh;
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+	background:#292929;
+	z-index:999999999999999;
+	padding:2vh;
+	margin: 0 auto;
+	padding: 30vh 15vw;
+	opacity:0.99;
 }
 
+.pop-1 {
 
-.outer {
-	fill:#fff;
 }
 
+.pop-2 {
 
-.top-left, .top-right {
-		  -webkit-animation: slide-in-tl 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) ;
-	        animation: slide-in-tl 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) ;
-		}
-
-.bottom-left, .bottom-right {
-	-webkit-animation: slide-in-bl 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) ;
-	  	animation: slide-in-bl 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) ;
 }
 
-	/**
-	 * ----------------------------------------
-	 * animation slide-in-tl
-	 * ----------------------------------------
-	 */
-	@-webkit-keyframes slide-in-tl {
-	  0% {
-		-webkit-transform: translateY(-1000px) translateX(-1000px);
-				transform: translateY(-1000px) translateX(-1000px);
-		opacity: 0;
-	  }
-	  100% {
-		-webkit-transform: translateY(0) translateX(0);
-				transform: translateY(0) translateX(0);
-		opacity: 1;
-	  }
-	}
-	@keyframes slide-in-tl {
-	  0% {
-		-webkit-transform: translateY(-1000px) translateX(-1000px);
-				transform: translateY(-1000px) translateX(-1000px);
-		opacity: 0;
-	  }
-	  100% {
-		-webkit-transform: translateY(0) translateX(0);
-				transform: translateY(0) translateX(0);
-		opacity: 1;
-	  }
-	}
+.pop-3 {
 
-	/**
-	 * ----------------------------------------
-	 * animation slide-in-bl
-	 * ----------------------------------------
-	 */
-	@-webkit-keyframes slide-in-bl {
-	  0% {
-		-webkit-transform: translateY(1000px) translateX(-1000px);
-				transform: translateY(1000px) translateX(-1000px);
-		opacity: 0;
-	  }
-	  100% {
-		-webkit-transform: translateY(0) translateX(0);
-				transform: translateY(0) translateX(0);
-		opacity: 1;
-	  }
-	}
-	@keyframes slide-in-bl {
-	  0% {
-		-webkit-transform: translateY(1000px) translateX(-1000px);
-				transform: translateY(1000px) translateX(-1000px);
-		opacity: 0;
-	  }
-	  100% {
-		-webkit-transform: translateY(0) translateX(0);
-				transform: translateY(0) translateX(0);
-		opacity: 1;
-	  }
-	}
+}
+
+.pop-4 {
+
+}
+
 
 
 	/**
 	 * ----------------------------------------
-	 * Print on demand page
+	 * Print on demand page (Red)
 	 * ----------------------------------------
 	 */
 
@@ -161,7 +110,7 @@ body.fade {
 
 	/**
 	 * ----------------------------------------
-	 * Manufacturing page
+	 * Manufacturing page (Blue)
 	 * ----------------------------------------
 	 */
 
@@ -182,7 +131,7 @@ body.fade {
 
 	/**
 		* ----------------------------------------
-	  * Cosmetics page
+	  * Cosmetics page (Pink)
 	  * ----------------------------------------
 	  */
 
@@ -202,7 +151,7 @@ body.fade {
 
 	/**
 		* ----------------------------------------
-		* Fitness page
+		* Fitness page (Green)
 		* ----------------------------------------
 		*/
 
@@ -213,15 +162,19 @@ body.fade {
 		h1.green {
  	 	margin-top:-20vw;
  	 	/* -webkit-text-stroke-color: var(--green); */
- 	 	left:7vw;
+		left: 17vw;
+    top: 15vh;
  	 }
 	 h1.green span {
 		 display:none;
 	 }
  	 .content_green {
  		 top:60vh !important;
- 		 right: 10!important;
+ 		 right: 30vw !important;
  	 }
+	 .header__green {
+		 top:22vh !important;
+	 }
 
 	 /**
  		* ----------------------------------------
@@ -277,6 +230,11 @@ body.fade {
 	 }
 
 
+	 /**
+		* ----------------------------------------
+		* Mobile Views
+		* ----------------------------------------
+		*/
 
 	@media screen and (max-width: 920px) {
 		/*Contact */
@@ -352,7 +310,8 @@ body.fade {
 
 		 /* Green */
 		 .green {
-	 			margin-left:7vw;
+	 			/* margin-left:7vw; */
+				display:none;
 	 		}
 	 		h1.green {
 	  	 	bottom:20vh;
@@ -360,19 +319,32 @@ body.fade {
 	  	.content_green {
 	  		top:45vh !important;
 	  		left:10vw !important;
+				right:auto !important;
 	  	}
+
+			.header__green {
+ 			 right:auto !important;
+			 margin-right: 8vw;
+			 top: 14vh !important;
+ 		 }
+		 .header__green h2 {
+			 font-size:1em;
+		 }
 	 }
 
 	 @media screen and (max-width: 320px) {
 	 	.fill-button {
 	 		width:60% !important;
 	 	}
+		.green {
+			display:none;
+		}
 	 }
 
 	 @media screen and (min-width: 1024px) {
 		 h1.green {
  			bottom:0;
- 			left:27vw;
+ 			left:17vw;
  		 }
 	 }
 
@@ -489,7 +461,6 @@ body.fade {
 	  color:var(--white);
 	  text-decoration:none;
 	  cursor: pointer;
-	  font-family: var(--font);
 		font-display: swap;
 		font-weight: var(--regular);
 		font-size:1em;
@@ -659,3 +630,94 @@ body.fade {
 	    color: #d3d9d9;
 	  }
 	}
+
+	/*************************************************
+
+								SVG LOGO  Animation
+
+	*************************************************/
+	.logo-bg {
+		margin-left:-10vw;
+		height: 100%;
+			z-index:999999999999999;
+	}
+
+	.mainPink {
+		fill:var(--mainPink);
+	}
+
+
+	.outer {
+		fill:#fff;
+	}
+
+
+	.top-left, .top-right {
+			  -webkit-animation: slide-in-tl 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) ;
+		        animation: slide-in-tl 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) ;
+			}
+
+	.bottom-left, .bottom-right {
+		-webkit-animation: slide-in-bl 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) ;
+		  	animation: slide-in-bl 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) ;
+	}
+
+		/**
+		 * ----------------------------------------
+		 * animation slide-in-tl
+		 * ----------------------------------------
+		 */
+		@-webkit-keyframes slide-in-tl {
+		  0% {
+			-webkit-transform: translateY(-1000px) translateX(-1000px);
+					transform: translateY(-1000px) translateX(-1000px);
+			opacity: 0;
+		  }
+		  100% {
+			-webkit-transform: translateY(0) translateX(0);
+					transform: translateY(0) translateX(0);
+			opacity: 1;
+		  }
+		}
+		@keyframes slide-in-tl {
+		  0% {
+			-webkit-transform: translateY(-1000px) translateX(-1000px);
+					transform: translateY(-1000px) translateX(-1000px);
+			opacity: 0;
+		  }
+		  100% {
+			-webkit-transform: translateY(0) translateX(0);
+					transform: translateY(0) translateX(0);
+			opacity: 1;
+		  }
+		}
+
+		/**
+		 * ----------------------------------------
+		 * animation slide-in-bl
+		 * ----------------------------------------
+		 */
+		@-webkit-keyframes slide-in-bl {
+		  0% {
+			-webkit-transform: translateY(1000px) translateX(-1000px);
+					transform: translateY(1000px) translateX(-1000px);
+			opacity: 0;
+		  }
+		  100% {
+			-webkit-transform: translateY(0) translateX(0);
+					transform: translateY(0) translateX(0);
+			opacity: 1;
+		  }
+		}
+		@keyframes slide-in-bl {
+		  0% {
+			-webkit-transform: translateY(1000px) translateX(-1000px);
+					transform: translateY(1000px) translateX(-1000px);
+			opacity: 0;
+		  }
+		  100% {
+			-webkit-transform: translateY(0) translateX(0);
+					transform: translateY(0) translateX(0);
+			opacity: 1;
+		  }
+		}

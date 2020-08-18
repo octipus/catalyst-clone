@@ -42,7 +42,7 @@
 
 
 
-.desc-content {
+.desc-content, .content__header {
 	position:absolute;
 	top:14vh;
 	right:10vw;
@@ -54,7 +54,7 @@
 	font-size: 30px !important;
 }
 
-.content__text {
+.content__text, .content__header {
 	font-family: var(--font);
 	font-display: swap;
 	font-weight: var(--regular);
@@ -63,6 +63,13 @@
 	right: 10vw;
 	text-align: left;
 	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.25);
+}
+
+.content__text span {
+	display:block;
+	font-size:1.2em;
+	margin-top:0.5em;
+	cursor: pointer;
 }
 
 @media screen and (max-width: 55em) {
