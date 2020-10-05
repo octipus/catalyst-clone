@@ -56,7 +56,7 @@ app.post('/send-email', function (req, res) {
 
   var composedMessage = {
       from: 'website@justcatalyst.com',
-      to: 'octavian@justcatalyst.com',
+      to: 'sophie@justcatalyst.com',
       text: 'Hey Dan!\n\n' +
         `${name} has contacted you through your website. Here is their contact information and message: \n\n` +
         `Name: ${name} \n` +
@@ -70,7 +70,7 @@ app.post('/send-email', function (req, res) {
   client.sendMail(composedMessage, function(err, info){
       if (err ){
         console.log(err)
-        res.redirect("/");
+        // res.redirect("/");
       }else {
         console.log('Message sent: ' + info.response);
         res.redirect("contact");
