@@ -114,6 +114,9 @@ app.get("/cosmetics", (req, res) => {
 app.get("/fitness", (req, res) => {
   res.render("fitness", { title: "Fitness" });
 });
+app.get("/web-q", (req, res) => {
+  res.render("web-q", { title: "Web Questionnaire" });
+});
 app.get("/sitemap.xml", (req, res) => {
   res.render("sitemap", { title: "siemap" });
 });
