@@ -92,6 +92,19 @@ body.fade {
 		padding:1em;
 }
 
+.contact-trip {
+	display: block;
+    font-family: var(--font);
+    font-display: swap;
+    letter-spacing: 3px;
+    font-size: 0.765rem;
+    padding: 0.5em 0;
+    width: 30vw !important;
+    min-width: 100%;
+    background: none;
+    color: var(--mainPink);
+}
+
 
 	/**
 	 * ----------------------------------------

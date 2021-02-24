@@ -1,9 +1,6 @@
 require('dotenv').config();
 const path = require("path");
 const express = require("express");
-const nodemailer = require("nodemailer");
-const sgTransport = require('nodemailer-sendgrid-transport');
-const bodyParser = require('body-parser');
 const https = require('https')
 const http = require('http');
 const fs = require('fs')
@@ -29,56 +26,6 @@ const httpPort = process.env.HTTP || "80";
 const httpsPort = process.env.HTTPS || "443";
 
 
-/////////////////////   CONTACT FORM HANDLER  /////////////////////
-
-app.use(bodyParser.urlencoded({extended: true}));
-
-var options = {
-  service: 'SendGrid',
-  auth: {
-    api_user: process.env.SENDGRID_API_USER,    // SG username
-    api_key: process.env.SENDGRID_API_PASSWORD
-  }
-}
-
-//use real deta until fix .env on ubuntu
-
-var client = nodemailer.createTransport(sgTransport(options));
-
-app.post('/send-email', function (req, res) {
-
-  var body = req.body;
-  var name = body.name;
-  var email = body.email;
-  var social = body.social;
-  var message = body.message;
-  var service = body.service;
-
-  var composedMessage = {
-      from: 'website@justcatalyst.com',
-      to: 'octavian@justcatalyst.com',
-      text: 'Hey Dan!\n\n' +
-        `${name} has contacted you through your website. Here is their contact information and message: \n\n` +
-        `Name: ${name} \n` +
-        `Email Address: ${email} \n` +
-        `Social: ${social} \n` +
-        `Message: ${message} \n` +
-        `Service: ${service} \n\n`,
-      subject: 'Website Contact Form'
-    };
-
-  client.sendMail(composedMessage, function(err, info){
-      if (err ){
-        console.log(err)
-        res.redirect("/");
-      }else {
-        console.log('Message sent: ' + info.response);
-        res.redirect("contact");
-      }
-
-  });
-
-});
 
 
 /////////////////////   VIEWS  /////////////////////

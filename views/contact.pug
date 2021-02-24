@@ -28,32 +28,24 @@ block contact
         p Catalyst Global Ltd 
         p Edinburgh House, 170 Kennington Lane
         p SE11 5DP
-    .contact-form 
-      form#form(action='/send-email' method='post')
-        fieldset
-          input(type="text" placeholder="Your name..." class="form-control" id="name" name="name")
-          label(for="name" class="fa fa-user" aria-hidden="true")
-        fieldset
-          input(type="text" placeholder="Your email..." class="form-control" id="email" name="email")
-          label(for="email" class="fa fa-envelope" aria-hidden="true")
-        fieldset
-          input(type="text" placeholder="Your social media..." class="form-control" id="social" name="social")
-          label(for="social" class="fa fa-instagram" aria-hidden="true")
-        fieldset
-          textarea(type="text" placeholder="Your Message..." class="form-control" id="message" name="message")
-          label(for="message" class="fa fa-comment" aria-hidden="true")
-        fieldset
-            label(for="services" class="fa fa-cog" aria-hidden="true" name="service")
-            select#service(name='service')
-              option I am interested in...
-              option(value='POD') Print on Demand
-              option(value='Manufactured') Manufactured Apparel
-              option(value='Cosmetics') Health & Beauty
-              option(value='Fitness') Fitness
-        fieldset
-          button.fill-button#submit(type="submit" name="submit")
-            span.fill-button-hover
-              span.fill-button-text Submit	  
+    .contact-form
+      #tripetto.contact-trip
+        script(src='https://unpkg.com/tripetto-runner-foundation')
+        script(src='https://unpkg.com/tripetto-runner-autoscroll')
+        script(src='https://unpkg.com/tripetto-services')
+        script.
+          var tripetto = TripettoServices.init({ token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoid1pRa0F0R1VzZ3gyaXN5bE5uZHVXSjEwRFpmUkxYVVdQVVJtM2NCVkdNTT0iLCJkZWZpbml0aW9uIjoiVmtqMGxKa1d3M20yZ0QrbGhOT2xqemVGTHB0MnZEWVZ1SXlYY0lyWEorYz0iLCJ0eXBlIjoiY29sbGVjdCJ9.ozQFkSFhM-dT8pg5LF8TysYR632yi1HTuwcZHvla_f0" });
+          TripettoAutoscroll.run({
+          element: document.getElementById("tripetto"),
+          definition: tripetto.definition,
+          styles: tripetto.styles,
+          l10n: tripetto.l10n,
+          locale: tripetto.locale,
+          translations: tripetto.translations,
+          attachments: tripetto.attachments,
+          onSubmit: tripetto.onSubmit
+          });
+
   script(src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js')
   link(rel='stylesheet' type='text/css' href='css/homeStyles.css')  
   link(rel='stylesheet' type='text/css' href='../css/contact.css')
