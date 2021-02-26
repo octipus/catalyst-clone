@@ -1,0 +1,44 @@
+extends nav
+
+block brand-values
+  main.web-q.home
+    .glitch 
+      svg.logo-bg.blank(xmlns='http://www.w3.org/2000/svg', viewbox='-50 0 1297.92 794.17')
+        g#logo-wrap(data-name='logo-wrap')
+          g#logo(data-name='logo')
+            path.bottom-left.inner.bottom.one(d='M.6 793.8l199.88-396.35h166.07L166.66 793.8H.6z')
+            path.bottom-left.outer.bottom(d='M366 397.82L166.44 793.43H1.19l199.52-395.61H366m1.2-.74H200.26L0 794.17h166.89l200.26-397.09z')
+            path.top-left.inner.top.two(d='M367.75 396.72L567.63.37H733.7L533.81 396.72H367.75z')
+            path.top-left.outer.top(d='M733.1.74L533.59 396.35H368.34L567.86.74H733.1m1.19-.74H567.4L367.15 397.08H534L734.29 0z')
+            path.bottom-right.inner.bottom.three(d='M464.22 793.8l199.89-396.35h166.07L630.29 793.8H464.22z')
+            path.bottom-right.outer.bottom(d='M829.58 397.82L630.06 793.43H464.82l199.52-395.61h165.24m1.19-.74H663.88L463.63 794.17h166.89l200.25-397.09z')
+            path.top-right.inner.top.four(d='M831.37 396.72L1031.26.37h166.07L997.44 396.72H831.37z')
+            path.top-right.outer.top(d='M1196.73.74L997.21 396.35H832L1031.48.74h165.25m1.19-.74H1031L830.77 397.08h166.89L1197.92 0z')
+      .glitch__img
+      .glitch__img
+      .glitch__img
+      .glitch__img
+      .glitch__img
+    #tripetto
+      script(src='https://unpkg.com/tripetto-runner-foundation')
+      script(src='https://unpkg.com/tripetto-runner-chat')
+      script(src='https://unpkg.com/tripetto-services')
+      script.
+        var tripetto = TripettoServices.init({ token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoid1pRa0F0R1VzZ3gyaXN5bE5uZHVXSjEwRFpmUkxYVVdQVVJtM2NCVkdNTT0iLCJkZWZpbml0aW9uIjoiUE1lLzduS243VHFUZGVNZmk0VTRVMW5iQXpFZEp6ZGM0WWpkYlhpa0xmST0iLCJ0eXBlIjoiY29sbGVjdCJ9.JpEjpNVfBWOqrdB41ACqQBQl_q5-RQsEO9sRbh9ta1s" });
+        TripettoChat.run({
+        element: document.getElementById("tripetto"),
+        definition: tripetto.definition,
+        styles: tripetto.styles,
+        l10n: tripetto.l10n,
+        locale: tripetto.locale,
+        translations: tripetto.translations,
+        attachments: tripetto.attachments,
+        onSubmit: tripetto.onSubmit,
+        snapshot: tripetto.snapshot,
+        onPause: tripetto.onPause,
+        persistent: true
+        });
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js')
+  link(rel='stylesheet' type='text/css' href='css/homeStyles.css')  
+  link(rel='stylesheet' type='text/css' href='../css/contact.css')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js')

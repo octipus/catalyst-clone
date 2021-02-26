@@ -64,6 +64,9 @@ app.get("/fitness", (req, res) => {
 app.get("/web-q", (req, res) => {
   res.render("web-q", { title: "Web Questionnaire" });
 });
+app.get("/brand-values", (req, res) => {
+  res.render("brand-values", { title: "Brand Values" });
+});
 app.get("/sitemap.xml", (req, res) => {
   res.render("sitemap", { title: "siemap" });
 });
