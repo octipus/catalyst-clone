@@ -67,6 +67,9 @@ app.get("/web-q", (req, res) => {
 app.get("/brand-values", (req, res) => {
   res.render("brand-values", { title: "Brand Values" });
 });
+app.get("/client-feedback", (req, res) => {
+  res.render("client-feedback", { title: "Client Feedback" });
+});
 app.get("/sitemap.xml", (req, res) => {
   res.render("sitemap", { title: "siemap" });
 });
