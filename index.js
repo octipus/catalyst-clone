@@ -64,14 +64,14 @@ app.get("/fitness", (req, res) => {
 app.get("/web-q", (req, res) => {
   res.render("web-q", { title: "Web Questionnaire" });
 });
+app.get("/pod-q", (req, res) => {
+  res.render("pod-q", { title: "POD Questionnaire" });
+});
 app.get("/brand-values", (req, res) => {
   res.render("brand-values", { title: "Brand Values" });
 });
-app.get("/client-feedback", (req, res) => {
-  res.render("client-feedback", { title: "Client Feedback" });
-});
 app.get("/sitemap.xml", (req, res) => {
-  res.render("sitemap", { title: "siemap" });
+  res.render("sitemap", { title: "sitemap" });
 });
 
 // Load video file
