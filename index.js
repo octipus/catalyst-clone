@@ -22,8 +22,8 @@ async function getUrls () {
   return await getUrlsFromDatabase()
 }
 
-const httpPort = process.env.HTTP || "80";
-const httpsPort = process.env.HTTPS || "443";
+const httpPort = process.env.HTTP || "8082";
+const httpsPort = process.env.HTTPS || "4423";
 
 
 
@@ -123,7 +123,7 @@ const httpsServer = https.createServer({
   cert: fs.readFileSync('server.cert'),
 }, app);
 
-httpServer.listen(80, () => {
+httpServer.listen(8082, () => {
     console.log(`HTTP Server running on http://localhost:${httpPort}`);
 });
 

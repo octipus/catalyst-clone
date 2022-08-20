@@ -1,11 +1,3 @@
-/////////////////////   Glitch Effect   /////////////////////
-{
-	imagesLoaded('.glitch__img', { background: true }, () => {
-		document.body.classList.remove('loading');
-		document.body.classList.add('imgloaded');
-	});
-}
-
 /////////////////////   Title animation on mousemove   /////////////////////
 
 $( document ).ready(function() {

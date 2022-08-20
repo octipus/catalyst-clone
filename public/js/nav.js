@@ -58,7 +58,6 @@ document.addEventListener('DOMContentLoaded', function(){
     var menuItems = document.querySelectorAll('.menu__item');
     var menuLinks = document.getElementsByClassName('menu__link');
     var dropdown = document.getElementById('dropdown');
-    var test = document.getElementById('test');
     var dropdownItems = document.querySelectorAll('.submenu__link');
 
     var active = false;
@@ -87,10 +86,6 @@ document.addEventListener('DOMContentLoaded', function(){
         active = false;
       }
     };
-
-    if (test) {
-      console.log("test");
-    }
 
     var pageDelay = function(e) {
         e.preventDefault();

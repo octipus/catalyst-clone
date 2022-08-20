@@ -552,7 +552,7 @@ body.fade {
 	} */
 	#test:focus {
 		animation: grain 8s steps(10) infinite;
-		background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/wild_oliva.png);
+		background-image: url("../media/classy_fabric.webp");
 		position: fixed;
 		opacity: 0.4;
 		content: "";
@@ -560,7 +560,7 @@ body.fade {
 
 	.home:after, .contact:after{
 	  animation: grain 8s steps(10) infinite;
-	  background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/wild_oliva.png);
+	  background-image: url("../media/classy_fabric.webp");
 	  content: "";
 	  height: 300%;
 	  left: -50%;
